@@ -11,40 +11,6 @@
     <!-- Подключаем наш глобальный файл стилей. Путь ведет на уровень выше -->
     <link rel="stylesheet" href="../style.css">
     <!-- Внутренний фикс адаптивности табов для мобильных экранов -->
-    <style>
-        /* НА КОМПЬЮТЕРАХ (Большие экраны) */
-        @media (min-width: 992px) {
-            .loft-mobile-accordion-panel {
-                display: none !important;
-            }
-            .loft-panel-content {
-                display: none;
-            }
-            .loft-panel-content.active {
-                display: block !important;
-            }
-        }
-
-        /* НА ТЕЛЕФОНАХ И ПЛАНШЕТАХ (Меньше 991px) */
-        @media (max-width: 991px) {
-            .loft-panels-display {
-                display: none !important;
-            }
-            .loft-mobile-accordion-panel {
-                display: none;
-                background: #0d0d0d !important;
-                border: 1px solid #141414 !important;
-                border-top: none !important;
-                padding: 25px 15px !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-                margin-bottom: 10px;
-            }
-            .loft-mobile-accordion-panel.active {
-                display: block !important;
-            }
-        }
-    </style>
 </head>
 
     <!-- PREMIUM FIXED NAVBAR -->
@@ -89,186 +55,126 @@
         </div>
     </section>
 
-    <!-- LOFT TABS ADAPTIVE SECTION -->
-    <section class="loft-services-layout">
-        <div class="loft-services-container">
-            
-            <!-- Заголовок секции -->
-            <div class="loft-services-header">
-                <h2 class="loft-services-title">УСЛУГИ ЕВРОМОЙКИ</h2>
-                <div class="loft-services-divider"></div>
-                <p class="loft-services-subtitle">
-                    Профессиональный уход, оснащенный передовым немецким оборудованием и премиальной химией Koch Chemie для бережной очистки вашего автомобиля.
+<!-- ==========================================================================
+     МОБИЛЬНО-АДАПТИВНЫЙ LOFT-МОДУЛЬ УСЛУГ (БЕЗ ЦИФР)
+     ========================================================================== -->
+<section class="loft-services-layout">
+    <div class="loft-services-container">
+        
+            <!-- ИСПРАВЛЕННЫЙ БЛОК: СИНХРОНИЗАЦИЯ СТИЛЯ ЧЕРТЫ И ШРИФТА -->
+            <div class="eurowash-header" style="text-align: center; margin-bottom: 40px !important;">
+                <h2 class="eurowash-main-title" style="font-weight: 300 !important; letter-spacing: 3px !important; text-transform: uppercase !important; font-size: 36px !important; margin-bottom: 15px !important; color: #FFFFFF !important;">
+                    Наши услуги
+                </h2>
+                <div class="eurowash-line-divider" style="margin: 0 auto 20px auto !important;"></div>
+                <p class="eurowash-main-subtitle" style="max-width: 800px; margin: 0 auto !important;">
+                    Профессиональный автосервис, оснащенный передовым промышленным оборудованием для диагностики и ремонта автомобилей всех марок.
                 </p>
             </div>
 
-            <!-- Сетка табов: Кнопки слева, контент справа -->
-            <div class="loft-tabs-wrapper">
+        <div class="loft-tabs-wrapper">
+            
+            <!-- НАВИГАЦИЯ: СЕТКА ИЗ 6 ПЛИТ -->
+            <div class="loft-tabs-grid">
                 
-                <!-- ЛЕВАЯ КОЛОНКА: Кнопки и встроенные мобильные списки -->
-                <div class="loft-tabs-grid">
-                    
-                    <!-- ГРУППА 1: Базовые работы -->
-                    <div class="loft-tab-group">
-                        <button class="loft-tab-btn active" onclick="openLoftTab(event, 'tab-base')">
-                            <span class="tab-title">Базовые работы</span>
-                        </button>
-                        <!-- Мобильный список 1 -->
-                        <div id="tab-base-mobile" class="loft-mobile-accordion-panel active">
-                            <h3 class="panel-inside-title">Базовые работы по уходу за кузовом</h3>
-                            <ul class="price-list-items">
-                                <li>Экспресс-мойка кузова</li>
-                                <li>Турбо-сушка кузова</li>
-                                <li>Мойка подкрылок</li>
-                                <li>Мойка днища (подкатным устройством)</li>
-                                <li>Двухфазная мойка кузова</li>
-                                <li>Трёхфазная мойка кузова</li>
-                                <li>Евромойка кузова</li>
-                                <li>Детейлинг мойка с нанесением воска Carnauba</li>
-                                <li>Гидрофобное покрытие кузова Кварцем</li>
-                                <li>Бесокнтактная мойка кузова с протиркой</li>
-                                <li>Мойка колес</li>
-                                <li>Стирка текстильных ковриков</li>
-                                <li>Протирка всех стёкол</li>
-                                <li>Мойка резиновых ковриков</li>
-                                <li>Мойка коврика с багажника</li>
-                                <li>Влажная уборка салона</li>
-                                <li>Пылесос салона</li>
-                                <li>Пылесос ковриков</li>
-                                <li>Чистка хрома</li>
-                                <li>Чернение колес</li>
-                                <li>Удаление пятен от скотча, клея, маркера</li>
-                                <li>Удаление пятен от насекомых, почек, битума</li>
-                                <li>Применение антизамерзающей жидкости для замков</li>
-                                <li>Анти-дождь на стёкла</li>
-                                <li>Подготовка к полировке (оклейке)</li>
-                            </ul>
-                            <p class="panel-disclaimer">* Итоговая стоимость формируется после осмотра специалистом и зависит от класса, габаритов и степени загрязнения вашего автомобиля.</p>
-                        </div>
-                    </div>
-
-                    <!-- ГРУППА 2: Уход за салоном -->
-                    <div class="loft-tab-group">
-                        <button class="loft-tab-btn" onclick="openLoftTab(event, 'tab-salon')">
-                            <span class="tab-title">Уход за салоном</span>
-                        </button>
-                        <!-- Мобильный список 2 -->
-                        <div id="tab-salon-mobile" class="loft-mobile-accordion-panel">
-                            <h3 class="panel-inside-title">Премиальный уход за интерьером</h3>
-                            <ul class="price-list-items">
-                                <li>Очистка салона от шерсти</li>
-                                <li>Уход за кожаными поверхностями</li>
-                                <li>Полироль пластика всего автомобиля</li>
-                                <li>Озонирование салона</li>
-                                <li>Обработка силиконом резиновых уплотнений</li>
-                                <li>Удаление загрязнения в салоне</li>
-                                <li>Уборка багажника</li>
-                                <li>Обработка всех кожаных элементов кондиционером</li>
-                                <li>Влажная уборка салона</li>
-                            </ul>
-                            <p class="panel-disclaimer">* Итоговая стоимость формируется после осмотра специалистом и зависит от класса, габаритов и степени загрязнения вашего автомобиля.</p>
-                        </div>
-                    </div>
-
-                    <!-- ГРУППА 3: Химчистка -->
-                    <div class="loft-tab-group">
-                        <button class="loft-tab-btn" onclick="openLoftTab(event, 'tab-clean')">
-                            <span class="tab-title">Химчистка</span>
-                        </button>
-                        <!-- Мобильный список 3 -->
-                        <div id="tab-clean-mobile" class="loft-mobile-accordion-panel">
-                            <h3 class="panel-inside-title">Глубокая химчистка элементов</h3>
-                            <ul class="price-list-items">
-                                <li>Химчистка дисков</li>
-                                <li>Химчистка сидений</li>
-                                <li>Химчистка салона</li>
-                                <li>Химчистка потолка</li>
-                                <li>Химчистка пола</li>
-                                <li>Химчистка одного элемента</li>
-                                <li>Химчистка детского кресла</li>
-                                <li>Химчистка багажника</li>
-                            </ul>
-                            <p class="panel-disclaimer">* Итоговая стоимость формируется после осмотра специалистом и зависит от класса, габаритов и степени загрязнения вашего автомобиля.</p>
-                        </div>
+                <!-- КАТЕГОРИЯ 1 -->
+                <div class="loft-tab-group" id="group-cat-to">
+                    <div class="loft-tab-btn active" onclick="switchLoftTab(this, 'cat-to')">
+                        <span class="tab-title">Базовые работы</span>
                     </div>
                 </div>
 
-                <!-- ПРАВАЯ КОЛОНКА: Вывод списков услуг (КОМПЬЮТЕРНАЯ ВЕРСИЯ) -->
-                <div class="loft-panels-display">
-                    
-                    <!-- ТАБ 1 -->
-                    <div id="tab-base" class="loft-panel-content active">
-                        <h3 class="panel-inside-title">Базовые работы по уходу за кузовом</h3>
-                        <ul class="price-list-items">
-                            <li>Экспресс-мойка кузова</li>
-                            <li>Турбо-сушка кузова</li>
-                            <li>Мойка подкрылок</li>
-                            <li>Мойка днища (подкатным устройством)</li>
-                            <li>Двухфазная мойка кузова</li>
-                            <li>Трёхфазная мойка кузова</li>
-                            <li>Евромойка кузова</li>
-                            <li>Детейлинг мойка с нанесением воска Carnauba</li>
-                            <li>Гидрофобное покрытие кузова Кварцем</li>
-                            <li>Бесокнтактная мойка кузова с протиркой</li>
-                            <li>Мойка колес</li>
-                            <li>Стирка текстильных ковриков</li>
-                            <li>Протирка всех стёкол</li>
-                            <li>Мойка резиновых ковриков</li>
-                            <li>Мойка коврика с багажника</li>
-                            <li>Влажная уборка салона</li>
-                            <li>Пылесос салона</li>
-                            <li>Пылесос ковриков</li>
-                            <li>Чистка хрома</li>
-                            <li>Чернение колес</li>
-                            <li>Удаление пятен от скотча, клея, маркера</li>
-                            <li>Удаление пятен от насекомых, почек, битума</li>
-                            <li>Применение антизамерзающей жидкости для замков</li>
-                            <li>Анти-дождь на стёкла</li>
-                            <li>Подготовка к полировке (оклейке)</li>
-                        </ul>
-                        <p class="panel-disclaimer">* Итоговая стоимость формируется после осмотра специалистом и зависит от класса, габаритов и степени загрязнения вашего автомобиля.</p>
+                <!-- КАТЕГОРИЯ 2 -->
+                <div class="loft-tab-group" id="group-cat-brakes">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-brakes')">
+                        <span class="tab-title">Уход за салоном</span>
                     </div>
-
-                    <!-- ТАБ 2 -->
-                    <div id="tab-salon" class="loft-panel-content">
-                        <h3 class="panel-inside-title">Премиальный уход за интерьером</h3>
-                        <ul class="price-list-items">
-                            <li>Очистка салона от шерсти</li>
-                            <li>Уход за кожаными поверхностями</li>
-                            <li>Полироль пластика всего автомобиля</li>
-                            <li>Озонирование салона</li>
-                            <li>Обработка силиконом резиновых уплотнений</li>
-                            <li>Удаление загрязнения в салоне</li>
-                            <li>Уборка багажника</li>
-                            <li>Обработка всех кожаных элементов кондиционером</li>
-                            <li>Влажная уборка салона</li>
-                        </ul>
-                        <p class="panel-disclaimer">* Итоговая стоимость формируется после осмотра специалистом и зависит от класса, габаритов и степени загрязнения вашего автомобиля.</p>
-                    </div>
-
-                        <!-- ТАБ 3 -->
-                    <div id="tab-clean" class="loft-panel-content">
-                        <h3 class="panel-inside-title">Глубокая химчистка элементов
-                        </h3>
-                        <ul class="price-list-items">
-                            <li>Химчистка дисков</li>
-                            <li>Химчистка сидений</li>
-                            <li>Химчистка салона</li>
-                            <li>Химчистка потолка</li>
-                            <li>Химчистка пола</li>
-                            <li>Химчистка одного элемента</li>
-                            <li>Химчистка детского кресла</li>
-                            <li>Химчистка багажника</li>
-                        </ul>
-                        <p class="panel-disclaimer">* Итоговая стоимость формируется после осмотра специалистом и зависит от класса, габаритов и степени загрязнения вашего автомобиля.</p>
-                                        
-                    </div>
-
                 </div>
+
+                <!-- КАТЕГОРИЯ 3 -->
+                <div class="loft-tab-group" id="group-cat-suspension">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-suspension')">
+                        <span class="tab-title">Химчистка</span>
+                    </div>
+                </div>
+
             </div>
 
+            <!-- ДЕСКТОПНЫЙ ХРАНИЛИЩЕ-ЭКРАН -->
+            <div class="loft-panels-display" id="desktop-display-panel">
+                
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 1 -->
+                <div class="loft-panel-content active" id="cat-to">
+                    <h3 class="panel-inside-title">Перечень услуг</h3>
+                    <ul class="price-list-items">
+                        <li>Экспресс-мойка кузова</li>
+                        <li>Турбо-сушка кузова</li>
+                        <li>Мойка подкрылок</li>
+                        <li>Мойка днища (подкатным устройством)</li>
+                        <li>Двухфазная мойка кузова</li>
+                        <li>Трёхфазная мойка кузова</li>
+                        <li>Евромойка кузова</li>
+                        <li>Детейлинг мойка с нанесением воска Carnauba</li>
+                        <li>Гидрофобное покрытие кузова Кварцем</li>
+                        <li>Бесконтактная мойка кузова с протиркой</li>
+                        <li>Мойка колес</li>
+                        <li>Стирка текстильных ковриков</li>
+                        <li>Протирка всех стёкол</li>
+                        <li>Мойка резиновых ковриков</li>
+                        <li>Мойка коврика с багажника</li>
+                        <li>Влажная уборка салона</li>
+                        <li>Пылесос салона</li>
+                        <li>Пылесос ковриков</li>
+                        <li>Чистка хрома</li>
+                        <li>Чернение колес</li>
+                        <li>Удаление пятен от скотча, клея, маркера</li>
+                        <li>Удаление пятен от насекомых, почек, битума</li>
+                        <li>Применение антизамерзающей жидкости для замков</li>
+                        <li>Анти-дождь на стёкла</li>
+                        <li>Подготовка к полировке (оклейке)</li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 2 -->
+                <div class="loft-panel-content" id="cat-brakes">
+                    <h3 class="panel-inside-title">Перечень услуг</h3>
+                    <ul class="price-list-items">
+                        <li>Очистка салона от шерсти</li>
+                        <li>Уход за кожаными поверхностями</li>
+                        <li>Полироль пластика всего автомобиля</li>
+                        <li>Озонирование салона</li>
+                        <li>Обработка силиконом резиновых уплотнений</li>
+                        <li>Удаление загрязнения в салоне</li>
+                        <li>Уборка багажника</li>
+                        <li>Обработка всех кожаных элементов кондиционером</li>
+                        <li>Влажная уборка салона</li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 3 -->
+                <div class="loft-panel-content" id="cat-suspension">
+                    <h3 class="panel-inside-title">Перечень услуг</h3>
+                    <ul class="price-list-items">
+                        <li>Химчистка дисков</li>
+                        <li>Химчистка сидений</li>
+                        <li>Химчистка салона</li>
+                        <li>Химчистка потолка</li>
+                        <li>Химчистка пола</li>
+                        <li>Химчистка одного элемента</li>
+                        <li>Химчистка детского кресла</li>
+                        <li>Химчистка багажника</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра и зависит от объема работ
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- LOUNGE-ZONE MONOLITH -->
     <section class="loft-comfort-monolith" style="background-image: url('../images/photo-1625047509248-.jpg');">
@@ -374,7 +280,8 @@
 
         <!-- ПРАВАЯ ПЛИТА: ИНТЕРАКТИВНАЯ ТЕМНАЯ КАРТА -->
 <div class="footer-map-plate">
-    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/yevropeyskiy/230646910896/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Европейский</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/car_service_auto_repair/184105246/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Автосервис, автотехцентр в Новокузнецке</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/auto_detailing/9561111444/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Детейлинг в Новокузнецке</a><iframe src="https://yandex.ru/map-widget/v1/org/yevropeyskiy/230646910896/?ll=87.129810%2C53.785544&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/yevropeyskiy/230646910896/?utm_medium=mapframe&utm_source=maps" 
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">Европейский</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/car_service_auto_repair/184105246/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Автосервис, автотехцентр в Новокузнецке</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/auto_detailing/9561111444/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Детейлинг в Новокузнецке</a><iframe src="https://yandex.ru/map-widget/v1/org/yevropeyskiy/230646910896/?ll=87.129810%2C53.785544&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
 </div>
 </section>
 
@@ -538,43 +445,64 @@ document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
 });
 </script>
 
-<!-- АВТОМАТИЧЕСКИЙ КОНТРОЛЛЕР ДЛЯ КНОПОК И ОКНА ЗАПИСИ PORSCHE LOFT -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Оживляем раскрывающиеся списки (Аккордеоны)
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length > 0) {
-        faqItems.forEach(item => {
-            const trigger = item.querySelector('.faq-trigger');
-            if (trigger) {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const isActive = item.classList.contains('active');
-                    faqItems.forEach(el => el.classList.remove('active'));
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
-                });
+    function switchLoftTab(btn, targetId) {
+        const isMobile = window.innerWidth <= 991;
+        const targetPanel = document.getElementById(targetId);
+        const parentGroup = btn.closest('.loft-tab-group');
+
+        // Базовый сброс активности у всех кнопок
+        document.querySelectorAll('.loft-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (isMobile) {
+            // Мобильная логика: если панель уже раскрыта внутри этой же группы — закрываем её
+            if (parentGroup.contains(targetPanel) && targetPanel.classList.contains('active')) {
+                targetPanel.classList.remove('active');
+                btn.classList.remove('active');
+                // Возвращаем панель обратно в десктопный блок-хранилище
+                document.getElementById('desktop-display-panel').appendChild(targetPanel);
+                return;
             }
-        });
+
+            // Убираем старую активную панель у других элементов
+            document.querySelectorAll('.loft-panel-content').forEach(p => {
+                if(p.classList.contains('active')) {
+                    p.classList.remove('active');
+                    document.getElementById('desktop-display-panel').appendChild(p);
+                }
+            });
+
+            // Переносим контент внутрь мобильной группы прямо под кнопку и активируем
+            parentGroup.appendChild(targetPanel);
+            targetPanel.classList.add('active');
+
+            // Умный автоскролл: мягко докручиваем экран до нажатой кнопки
+            setTimeout(() => {
+                btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+
+        } else {
+            // Десктопная логика: возвращаем панели в штатное окно вывода справа
+            const display = document.getElementById('desktop-display-panel');
+            document.querySelectorAll('.loft-panel-content').forEach(p => {
+                p.classList.remove('active');
+                if (p.parentNode !== display) {
+                    display.appendChild(p);
+                }
+            });
+            targetPanel.classList.add('active');
+        }
     }
 
-    // 2. Оживляем табы переключения услуг (если они есть)
-    const tabButtons = document.querySelectorAll('.loft-tab-btn');
-    const panelContents = document.querySelectorAll('.loft-panel-content');
-    if (tabButtons.length > 0) {
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetTab = button.getAttribute('data-tab');
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                panelContents.forEach(panel => panel.classList.remove('active'));
-                button.classList.add('active');
-                const activePanel = document.getElementById(targetTab);
-                if (activePanel) activePanel.classList.add('active');
-            });
-        });
-    }
-});
+    // Запускаем проверку при изменении размеров экрана
+    window.addEventListener('resize', function() {
+        const activeBtn = document.querySelector('.loft-tab-btn.active');
+        if (activeBtn) {
+            const targetId = activeBtn.onclick.toString().match(/'([^']+)'/)[1];
+            switchLoftTab(activeBtn, targetId);
+        }
+    });
 </script>
 
 <!-- Плавающая стрелка «Наверх» в левом углу -->

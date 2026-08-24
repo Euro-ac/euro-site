@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сезонное хранение шин и дисков | Автокомплекс «Европейский»</title>
+    <!-- Выход на уровень вверх к глобальному CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <!-- АДАПТИВНАЯ PREMIUM ШАПКА -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Логотип комплекса -->
+            <!-- ИСПРАВЛЕННЫЙ ЭТАЛОННЫЙ ЛОГОТИП СЕТИ -->
+            <a href="../index.html" class="logo">
+                <span class="logo-main">Европейский</span>
+                <span class="logo-sub">автокомплекс</span>
+            </a>
+
+            <!-- Невидимый триггер переключения (CSS-хак для мобильных) -->
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            
+            <!-- Визуальная иконка бургера -->
+            <label for="menu-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- НАВИГАЦИОННАЯ ПАНЕЛЬ ПО ТОКЕНУ PLOT-REACT -->
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">О нас</a></li>
+                <li><a href="index.html">Услуги автосервиса</a></li>
+                <li><a href="evromoika.html">Евромойка</a></li>
+                <li><a href="detailing.html">Детейлинг</a></li>
+                <li><a href="../index.html#offers">Новости и акции</a></li>
+                <li><a href="../index.html#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- АБСОЛЮТНЫЙ ПОСЕКЦИОННЫЙ КЛОН-СТРУКТУРЫ ГЛАВНОЙ СТРАНИЦЫ -->
+    <section class="hero-section" style="background-image: url('../images/bg-storage.jpg') !important;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            
+            <!-- Жестко фиксируем размер 32px, тонкий вес 300 и сжатый интервал 3px -->
+            <h1 class="hero-title" style="font-size: 32px !important; font-weight: 300 !important; letter-spacing: 3px !important; line-height: 1.4 !important;">
+                ПРОФЕССИОНАЛЬНОЕ СЕЗОННОЕ ХРАНЕНИЕ ШИН И ДИСКОВ
+            </h1>
+            
+            <p class="hero-text" style="font-size: 14px !important; max-width: 650px !important;">
+                Освободите место на балконе и в гараже. Бережно сохраним ваши шины и диски в Новокузнецке. Мы создали условия, которые официально рекомендуют все крупные заводы-производители колес. Поток контроля климата непрерывен
+            </p>
+            
+            <!-- Строка миссии: фирменная бронза -->
+            <div class="hero-mission" style="color: #847562 !important; font-size: 11px !important; letter-spacing: 2px !important; font-family: 'Inter', sans-serif !important;">
+                АКТУАЛЬНОЕ СПЕЦПРЕДЛОЖЕНИЕ
+            </div>
+
+        </div>
+    </section>
+
+    <!-- БЛОК ПРЕИМУЩЕСТВ: КЛИМАТ-КОНТРОЛЬ НА СЕТКЕ ИЗУЧЕННЫХ КАРТОЧЕК -->
+    <section class="loft-services-section">
+        <div class="loft-services-container">
+            <div class="loft-services-header">
+                <h2 class="loft-services-title">
+                    Профессиональный <span class="loft-bronze-accent">климат-контроль</span>
+                </h2>
+                <div class="loft-services-divider"></div>
+                <p class="loft-services-subtitle">
+                    В отличие от сырых подвалов и открытых балконов, наш специализированный склад гарантирует неизменность характеристик резины
+                </p>
+            </div>
+
+            <div class="loft-services-grid">
+                <!-- Карточка 1 -->
+                <div class="porsche-loft-card">
+                    <div class="card-num" style="font-size: 36px; font-weight: 900; color: #847562; margin-bottom: 20px; font-family: 'Inter', sans-serif;">01</div>
+                    <h3>Защита от ультрафиолета</h3>
+                    <p>Храним колеса в полной темноте. Полностью исключаем появление микротрещин и пересыхание структуры резины</p>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="porsche-loft-card">
+                    <div class="card-num" style="font-size: 36px; font-weight: 900; color: #847562; margin-bottom: 20px; font-family: 'Inter', sans-serif;">02</div>
+                    <h3>Стабильная температура</h3>
+                    <p>Автоматически поддерживаем +15°С круглый год. Никакого пагубного воздействия сильного мороза или перегрева</p>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="porsche-loft-card">
+                    <div class="card-num" style="font-size: 36px; font-weight: 900; color: #847562; margin-bottom: 20px; font-family: 'Inter', sans-serif;">03</div>
+                    <h3>Правильная влажность</h3>
+                    <p>Принудительная система вентиляции склада. Надежно защищает металлические диски и корд от коррозии и ржавчины</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- УЛЬТИМАТИВНЫЙ БЛОКИРАТОР СКРЫТЫХ ЛИНИЙ И ПСЕВДОЭЛЕМЕНТОВ -->
+    <style>
+        .loft-services-section::before,
+        .loft-services-section::after,
+        .loft-comfort-monolith::before,
+        .loft-comfort-monolith::after,
+        .comfort-meta-code::before,
+        .comfort-meta-code::after {
+            content: none !important;
+            display: none !important;
+            height: 0 !important;
+            border: none !important;
+            background: none !important;
+            box-shadow: none !important;
+        }
+        .loft-services-section {
+            border-bottom: none !important;
+        }
+    </style>
+
+    <!-- БЛОК: ИНДУСТРИАЛЬНЫЙ ПРОЦЕСС ХРАНЕНИЯ (РИББОН-МАТРИЦА) -->
+    <section class="loft-comfort-monolith" style="background-image: url('../images/bg-storage.jpg'); margin-top: -2px !important; border-top: none !important;">
+        <div class="monolith-dark-overlay" style="position: absolute; inset: 0; background: linear-gradient(180deg, #000000 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0.75) 70%, #000000 100%); z-index: 2;"></div>
+        <div class="monolith-content">
+            <div class="comfort-header-centered">
+                <h2 class="comfort-title-main">Как проходит процесс</h2>
+                <div class="comfort-line-center"></div>
+                <p class="comfort-text-lead">Максимальная технологичность и экономия вашего времени на каждом этапе приемки</p>
+            </div>
+
+            <div class="comfort-linear-ribbon" style="width: 100% !important; max-width: 1200px !important; display: flex !important; justify-content: space-between !important; gap: 20px !important; margin: 0 auto !important;">
+                <!-- Шаг 1 -->
+                <div class="ribbon-item" style="background: rgba(18, 18, 18, 0.65) !important; border: 1px solid rgba(26, 26, 26, 0.8) !important; padding: 25px 20px !important; backdrop-filter: blur(5px) !important;">
+                    <div class="ribbon-label" style="color: #ca9e5a; font-weight: 900;">Приемка</div>
+                    <p class="ribbon-desc">Приезжаете на шиномонтаж. Маркируем колеса, полностью исключая путаницу</p>
+                </div>
+                <!-- Шаг 2 -->
+                <div class="ribbon-item" style="background: rgba(18, 18, 18, 0.65) !important; border: 1px solid rgba(26, 26, 26, 0.8) !important; padding: 25px 20px !important; backdrop-filter: blur(5px) !important;">
+                    <div class="ribbon-label" style="color: #ca9e5a; font-weight: 900;">Подготовка</div>
+                    <p class="ribbon-desc">Тщательно отмываем резину от дорожных реагентов и обрабатываем составом</p>
+                </div>
+                <!-- Шаг 3 -->
+                <div class="ribbon-item" style="background: rgba(18, 18, 18, 0.65) !important; border: 1px solid rgba(26, 26, 26, 0.8) !important; padding: 25px 20px !important; backdrop-filter: blur(5px) !important;">
+                    <div class="ribbon-label" style="color: #ca9e5a; font-weight: 900;">Размещение</div>
+                    <p class="ribbon-desc">Укладываем на полукруглые стеллажи, предотвращая деформацию корда</p>
+                </div>
+                <!-- Шаг 4 -->
+                <div class="ribbon-item" style="background: rgba(18, 18, 18, 0.65) !important; border: 1px solid rgba(26, 26, 26, 0.8) !important; padding: 25px 20px !important; backdrop-filter: blur(5px) !important;">
+                    <div class="ribbon-label" style="color: #ca9e5a; font-weight: 900;">Выдача</div>
+                    <p class="ribbon-desc">В новый сезон чистые колеса ждут вас у подъемника. Салон машины чист</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЭТАЛОННЫЙ ПОДВАЛ, НАМЕРТВО ПРИЖАТЫЙ К КРАЯМ ЭКРАНА -->
+    <section class="contacts-loft-section" id="contacts">
+        <div class="loft-footer-container">
+            
+            <!-- ЛЕВАЯ ИНФО-ПЛИТА -->
+            <div class="footer-info-plate">
+                <span class="footer-bronze-label">Контакты</span>
+                <h2 class="footer-main-title">Автокомплекс<br>«Европейский»</h2>
+                <div class="footer-line-divider"></div>
+
+                <div class="footer-meta-block">
+                    <span class="meta-label">График работы</span>
+                    <span class="meta-value">С 09:00 до 20:00 <span class="bronze-faded">без выходных</span></span>
+                </div>
+
+                <div class="footer-phones-grid">
+                    <a href="tel:+79609210006" class="footer-phone-link">
+                        <span class="phone-number">+7 960 921 0006</span>
+                        <span class="phone-dept">автосервис</span>
+                    </a>
+                    <a href="tel:+79609260005" class="footer-phone-link">
+                        <span class="phone-number">+7 960 926 0005</span>
+                        <span class="phone-dept">автомойка</span>
+                    </a>
+                    <a href="tel:+79027577374" class="footer-phone-link">
+                        <span class="phone-number">+7 902 757 7374</span>
+                        <span class="phone-dept">детейлинг</span>
+                    </a>
+                    <a href="tel:+73843583888" class="footer-phone-link">
+                        <span class="phone-number">+7 3843 583 888</span>
+                        <span class="phone-dept">многоканальный</span>
+                    </a>
+                </div>
+
+                <div class="footer-navigation-links">
+                    <a href="mailto:euro-ac@mail.ru" class="footer-interactive-anchor">euro-ac@mail.ru</a>
+                <!-- Прямая ссылка-переход в карточку 2ГИС -->
+                <a href="https://2gis.ru/novokuznetsk/firm/70000001036397132?m=87.129982%2C53.785603%2F16" target="_blank" rel="noopener" class="footer-interactive-anchor address-anchor">
+                    г. Новокузнецк, ул. ДОЗ, д. 2Б
+                </div>
+
+            <!-- Блок социальных сетей (Иконки заменены на элитный текстовый разгон) -->
+            <div class="footer-social-loft">
+                <a href="https://vk.com/euroac" target="_blank" rel="noopener" class="social-loft-link">ВКонтакте</a>
+                <a href="https://max.ru/join/dJu6TANS-S82IZVHqAVHKqB6mJ25j6_Ol82j2X-LHgs" target="_blank" rel="noopener" class="social-loft-link">MAX</a>
+                <a href="https://t.me/EuroAutoServiceNVKZ" target="_blank" rel="noopener" class="social-loft-link">Telegram</a>
+            </div>
+
+                <div class="footer-copyright-porsche">
+                    © 2026 АВТОКОМПЛЕКС ЕВРОПЕЙСКИЙ. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+
+                    <!-- ПРАВАЯ ПЛИТА: ИНТЕРАКТИВНАЯ ТЕМНАЯ КАРТА -->
+<div class="footer-map-plate">
+    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/yevropeyskiy/230646910896/?utm_medium=mapframe&utm_source=maps" 
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">Европейский</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/car_service_auto_repair/184105246/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Автосервис, автотехцентр в Новокузнецке</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/auto_detailing/9561111444/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Детейлинг в Новокузнецке</a><iframe src="https://yandex.ru/map-widget/v1/org/yevropeyskiy/230646910896/?ll=87.129810%2C53.785544&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+</div>
+</section>
+
+        </div>
+    </footer>
+             
+    <a href="#" class="loft-scroll-top-btn" style="border-radius: 0 !important;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 19V5M5 12l7-7 7 7" stroke-width="1.2"/></svg>
+    </a>
+
+    <div id="online-booking" class="popup-overlay">
+        <a href="#" class="popup-close-area"></a>
+        <div class="popup-body-glass" style="border-radius: 0 !important;">
+            <a href="#" class="popup-close-btn">&times;</a>
+            <h3>Онлайн-запись</h3>
+            <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Введите имя" required style="border-radius: 0 !important;">
+                </div>
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (999) 000-00-00" required style="border-radius: 0 !important;">
+                </div>
+                <div class="form-group">
+                    <label>Направление услуг</label>
+                    <select style="border-radius: 0 !important;">
+                        <option value="service" selected>Автосервис / Ремонт</option>
+                        <option value="wash">Евромойка</option>
+                        <option value="detailing">Детейлинг / Полировка</option>
+                    </select>
+                </div>
+                <button type="submit" class="popup-submit-btn" style="border-radius: 0 !important;">Подтвердить запись</button>
+            </form>
+        </div>
+    </div>
+    </footer>
+
+        <!-- КНОПКА ЗАПИСИ (из вашего кода Tilda) -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
+
+ <!-- ========================================== -->
+    <!-- БЛОК ОНЛАЙН-ЗАПИСИ (ФОРМА И КНОПКА)        -->
+    <!-- ========================================== -->
+
+    <!-- Модальное всплывающее окно (Попап) -->
+    <div id="popup:zapis" class="popup-overlay">
+        <!-- Кнопка-ссылка на саму себя для закрытия окна при клике на темный фон -->
+        <a href="#close" class="popup-close-area"></a>
+        
+        <!-- Само окно из матового стекла -->
+        <div class="popup-body-glass">
+            <!-- Изящный крестик для закрытия формы -->
+            <a href="#close" class="popup-close-btn">&times;</a>
+            
+            <!-- Заголовок формы -->
+            <h3>Онлайн-запись</h3>
+            <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
+            
+            <!-- Интерактивная форма ввода данных -->
+            <form class="popup-form">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Иван Иванов" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Выберите направление услуг</label>
+                    <select required>
+                        <option value="" disabled selected hidden>Нажмите для выбора...</option>
+                        <option value="service">Автосервис / Ремонт</option>
+                        <option value="wash">Евромойка</option>
+                        <option value="detailing">Детейлинг / Полировка</option>
+                    </select>
+                </div>
+                
+                <!-- Премиальная кнопка отправки с золотым свечением -->
+                <button type="submit" class="popup-submit-btn">Подтвердить запись</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Фиксированная кнопка записи VIP-формата с волнами цвета шампани -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
+
+<script>
+function toggleFaq(trigger) {
+    // 1. Находим общую коробку текущего вопроса
+    const item = trigger.parentElement;
+    // 2. Находим скрытую панель ответа строго внутри этой коробки
+    const panel = item.querySelector('.faq-panel');
+    // 3. Проверяем, открыт ли этот вопрос прямо сейчас
+    const isNowActive = item.classList.contains('active');
+    
+    // Мягко закрываем все остальные открытые вопросы на сайте (эффект моно-аккордеона)
+    document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-panel').style.maxHeight = null;
+    });
+
+    // Если вопрос был закрыт — активируем класс и принудительно вычисляем его внутреннюю высоту в пикселях
+    if (!isNowActive) {
+        item.classList.add('active');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+}
+</script>
+
+<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
+<script>
+document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Вычисляем, где находится нужный блок на странице
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            
+            let startTime = null;
+            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
+
+            // Формула плавного замедления (Cubic Ease-Out)
+            function easeOutCubic(t, b, c, d) {
+                t /= d;
+                t--;
+                return c * (t * t * t + 1) + b;
+            }
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
+                
+                window.scrollTo(0, run);
+                
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            
+            requestAnimationFrame(animation);
+        }
+
+        // Автозакрытие мобильного меню (если открыто)
+        const burgerToggle = document.getElementById('menu-toggle');
+        if (burgerToggle && burgerToggle.checked) {
+            burgerToggle.checked = false;
+        }
+    });
+});
+</script>
+
+</body>
+</html>             

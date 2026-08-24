@@ -47,55 +47,72 @@
         </div>
     </section>
 
-    <!-- LOFT TABS ADAPTIVE SYSTEM -->
-    <section id="services-list" class="loft-services-layout">
-        <div class="loft-services-container">
-            <!-- ИДЕАЛЬНОЕ СВЕДЕНИЕ К МАСШТАБУ СТРАНИЦЫ ЕВРОМОЙКИ С ФИРМЕННОЙ ЧЕРТОЙ -->
+<!-- ==========================================================================
+     МОБИЛЬНО-АДАПТИВНЫЙ LOFT-МОДУЛЬ УСЛУГ (БЕЗ ЦИФР)
+     ========================================================================== -->
+<section class="loft-services-layout">
+    <div class="loft-services-container">
+        
+            <!-- ИСПРАВЛЕННЫЙ БЛОК: СИНХРОНИЗАЦИЯ СТИЛЯ ЧЕРТЫ И ШРИФТА -->
             <div class="eurowash-header" style="text-align: center; margin-bottom: 40px !important;">
                 <h2 class="eurowash-main-title" style="font-weight: 300 !important; letter-spacing: 3px !important; text-transform: uppercase !important; font-size: 36px !important; margin-bottom: 15px !important; color: #FFFFFF !important;">
-                    Услуги детейлинга
+                    Наши услуги
                 </h2>
                 <div class="eurowash-line-divider" style="margin: 0 auto 20px auto !important;"></div>
                 <p class="eurowash-main-subtitle" style="max-width: 800px; margin: 0 auto !important;">
-                    Профессиональный детейлинг-центр, оснащенный передовым технологичным оборудованием для реставрации, защиты и комплексного ухода за автомобилями всех марок.
+                    Профессиональный автосервис, оснащенный передовым промышленным оборудованием для диагностики и ремонта автомобилей всех марок.
                 </p>
             </div>
 
-            <div class="loft-tabs-wrapper">
-                <div class="loft-tabs-grid">
-                    <div class="loft-tab-group">
-                        <button class="loft-tab-btn active">
-                            <span class="tab-title">Детейлинг и защита кузова</span>
-                        </button>
+        <div class="loft-tabs-wrapper">
+            
+            <!-- НАВИГАЦИЯ -->
+            <div class="loft-tabs-grid">
+                
+                <!-- КАТЕГОРИЯ 1 -->
+                <div class="loft-tab-group" id="group-cat-to">
+                    <div class="loft-tab-btn active" onclick="switchLoftTab(this, 'cat-to')">
+                        <span class="tab-title">Детейлинг-центр</span>
                     </div>
                 </div>
 
-                <div class="loft-panels-display" style="min-height: auto;">
-                    <div class="loft-panel-content active">
-                        <h3 class="panel-inside-title">Премиальные детейлинг-решения</h3>
-                        <ul class="price-list-items">
-                            <li>Мягкая полировка кузова</li>
-                            <li>Глубокая полировка кузова</li>
-                            <li>Полировка после покраски</li>
-                            <li>Полировка фар</li>
-                            <li>Шумоизоляция комплексно</li>
-                            <li>Шумоизоляция дверей</li>
-                            <li>Шумоизоляция багажника</li>
-                            <li>Шумоизоляция крыши</li>
-                            <li>Шумоизоляция пола салона</li>
-                            <li>Шумоизоляция крышки багажника</li>
-                            <li>Шумоизоляция наружных арок</li>
-                            <li>Шумоизоляция капота</li>
-                            <li>Оклейка антигравийной пленкой (фронтальная часть)</li>
-                            <li>Стайлинг кузова (изменение цвета)</li>
-                            <li class="and-others">И многое другое...</li>
-                        </ul>
-                        <span class="spec-note">* Итоговая стоимость формируется после осмотра и зависит от класса, бренда автомобиля и объема расходных материалов.</span>
+            </div>
+
+            <!-- ДЕСКТОПНЫЙ ХРАНИЛИЩЕ-ЭКРАН -->
+            <div class="loft-panels-display" id="desktop-display-panel">
+                
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 1 -->
+                <div class="loft-panel-content active" id="cat-to">
+                    <h3 class="panel-inside-title">Перечень услуг</h3>
+                    <ul class="price-list-items">
+                        <li>Мягкая полировка кузова</li>
+                        <li>Глубокая полировка кузова</li>
+                        <li>Полировка после покраски</li>
+                        <li>Полировка фар</li>
+                        <li>Шумоизоляция комплекс</li>
+                        <li>Шумоизоляция дверей</span></li>
+                        <li>Шумоизоляция багажника</li>
+                        <li>Шумоизоляция крыши</li>
+                        <li>Шумоизоляция пола салона</li>
+                        <li>Шумоизоляция крышки багажника</li>
+                        <li>Шумоизоляция наружных арок</li>
+                        <li>Шумоизоляция капота</li>
+                        <li>Оклейка антигравийной пленкой (фронтальная часть)</li>
+                        <li>Стайлинг кузова (изменение цвета)</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра и зависит от класса, бренда автомобиля и объема расходных материалов
+
                     </div>
                 </div>
+
+                </div>
+
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- LOUNGE-ZONE MONOLITH -->
     <section class="loft-comfort-monolith" style="background-image: url('../images/photo-1625047509248-.jpg');">
@@ -398,43 +415,64 @@ document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
 });
 </script>
 
-<!-- АВТОМАТИЧЕСКИЙ КОНТРОЛЛЕР ДЛЯ КНОПОК И ОКНА ЗАПИСИ PORSCHE LOFT -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Оживляем раскрывающиеся списки (Аккордеоны)
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length > 0) {
-        faqItems.forEach(item => {
-            const trigger = item.querySelector('.faq-trigger');
-            if (trigger) {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const isActive = item.classList.contains('active');
-                    faqItems.forEach(el => el.classList.remove('active'));
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
-                });
+    function switchLoftTab(btn, targetId) {
+        const isMobile = window.innerWidth <= 991;
+        const targetPanel = document.getElementById(targetId);
+        const parentGroup = btn.closest('.loft-tab-group');
+
+        // Базовый сброс активности у всех кнопок
+        document.querySelectorAll('.loft-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (isMobile) {
+            // Мобильная логика: если панель уже раскрыта внутри этой же группы — закрываем её
+            if (parentGroup.contains(targetPanel) && targetPanel.classList.contains('active')) {
+                targetPanel.classList.remove('active');
+                btn.classList.remove('active');
+                // Возвращаем панель обратно в десктопный блок-хранилище
+                document.getElementById('desktop-display-panel').appendChild(targetPanel);
+                return;
             }
-        });
+
+            // Убираем старую активную панель у других элементов
+            document.querySelectorAll('.loft-panel-content').forEach(p => {
+                if(p.classList.contains('active')) {
+                    p.classList.remove('active');
+                    document.getElementById('desktop-display-panel').appendChild(p);
+                }
+            });
+
+            // Переносим контент внутрь мобильной группы прямо под кнопку и активируем
+            parentGroup.appendChild(targetPanel);
+            targetPanel.classList.add('active');
+
+            // Умный автоскролл: мягко докручиваем экран до нажатой кнопки
+            setTimeout(() => {
+                btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+
+        } else {
+            // Десктопная логика: возвращаем панели в штатное окно вывода справа
+            const display = document.getElementById('desktop-display-panel');
+            document.querySelectorAll('.loft-panel-content').forEach(p => {
+                p.classList.remove('active');
+                if (p.parentNode !== display) {
+                    display.appendChild(p);
+                }
+            });
+            targetPanel.classList.add('active');
+        }
     }
 
-    // 2. Оживляем табы переключения услуг (если они есть)
-    const tabButtons = document.querySelectorAll('.loft-tab-btn');
-    const panelContents = document.querySelectorAll('.loft-panel-content');
-    if (tabButtons.length > 0) {
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetTab = button.getAttribute('data-tab');
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                panelContents.forEach(panel => panel.classList.remove('active'));
-                button.classList.add('active');
-                const activePanel = document.getElementById(targetTab);
-                if (activePanel) activePanel.classList.add('active');
-            });
-        });
-    }
-});
+    // Запускаем проверку при изменении размеров экрана
+    window.addEventListener('resize', function() {
+        const activeBtn = document.querySelector('.loft-tab-btn.active');
+        if (activeBtn) {
+            const targetId = activeBtn.onclick.toString().match(/'([^']+)'/)[1];
+            switchLoftTab(activeBtn, targetId);
+        }
+    });
 </script>
 
 
