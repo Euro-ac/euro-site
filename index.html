@@ -539,6 +539,13 @@
         
         <!-- Само окно из матового стекла -->
         <div class="popup-body-glass">
+        <!-- Блок тонирования при успешной отправке -->
+<div class="popup-success-overlay" id="popupSuccessBlock">
+    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#e5c07b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <div class="popup-success-text">Заявка отправлена,<br><span style="font-size: 16px; font-weight: 400; color: #a0a0a0;">ожидайте звонка</span></div>
+</div>    
             <!-- Изящный крестик для закрытия формы -->
             <a href="#close" class="popup-close-btn">&times;</a>
             
@@ -547,29 +554,30 @@
             <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
             
             <!-- Интерактивная форма ввода данных -->
-            <form class="popup-form">
+            <form id="crmForm" class="popup-form" action="https://script.google.com/macros/s/AKfycbyzHLDaqtXI50Fz1RO8ia5mrnzEPcvizptnSnze5HK3DpZdyk3x7TBOdiZ2ha40PhWG/exec" method="POST">
+                <input type="hidden" id="pageUrlField" name="page_url" value="">
                 <div class="form-group">
                     <label>Ваше имя</label>
-                    <input type="text" placeholder="Иван Иванов" required>
+                    <input type="text" id="clientName" name="name" required placeholder="Иван Иванов">
                 </div>
                 
                 <div class="form-group">
                     <label>Номер телефона</label>
-                    <input type="tel" placeholder="+7 (999) 000-00-00" required>
+                    <input type="tel" name="phone" placeholder="+7 (999) 000-00-00" required autocomplete="off">
                 </div>
                 
                 <div class="form-group">
                     <label>Выберите направление услуг</label>
-                    <select required>
-                        <option value="" disabled selected hidden>Нажмите для выбора...</option>
-                        <option value="service">Автосервис / Ремонт</option>
-                        <option value="wash">Евромойка</option>
-                        <option value="detailing">Детейлинг / Полировка</option>
-                    </select>
+                    <select name="service" required>
+    <option value="">Нажмите для выбора...</option>
+    <option value="Автосервис / Ремонт">Автосервис / Ремонт</option>
+    <option value="Автомойка">Автомойка</option>
+    <option value="Хранение шин">Сезонное хранение шин</option>
+</select>
                 </div>
                 
                 <!-- Премиальная кнопка отправки с золотым свечением -->
-                <button type="submit" class="popup-submit-btn">Подтвердить запись</button>
+                <button type="submit" id="submitBtn" class="popup-submit-btn">Подтвердить запись</button>
             </form>
         </div>
     </div>
@@ -659,6 +667,8 @@ document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
         <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke-linecap="square"/>
     </svg>
 </a>
+
+<script src="./popup-universal.js"></script>
 
 </body>
 </html>

@@ -3587,3 +3587,138 @@ body {
         text-align: left !important;
     }
 }
+
+/* 1. ПРИНУДИТЕЛЬНОЕ НАСЛЕДОВАНИЕ ШРИФТОВ В ФОРМЕ */
+.popup-form input,
+.popup-form select,
+.popup-form button,
+.popup-form select option {
+    font-family: inherit !important; /* Наследуем глобальный шрифт проекта Loft */
+    font-size: 14px;                 /* Унифицируем размер текста для читаемости */
+}
+
+/* 2. ИСПРАВЛЕНИЕ ЛОКАЦИИ И СТИЛЯ ВЫПАДАЮЩЕГО СПИСКА (SELECT) */
+.popup-form select {
+    background-color: #111111;       /* Глубокий темный фон под дизайн Loft */
+    color: #ffffff;                  /* Белый цвет текста выбранного пункта */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/* Стилизация выпадающих пунктов (option) внутри браузерного селектора */
+.popup-form select option {
+    background-color: #1a1a1a;       /* Темный фон для выпадающего меню */
+    color: #ffffff;                  /* Белый текст пунктов */
+}
+
+/* 3. СТИЛИ ДЛЯ КРАСИВОГО ТОНИРОВАНИЯ И УСПЕШНОЙ ОТПРАВКИ */
+/* Окно уведомления изначально полностью прозрачно и перекрывает форму внутри попапа */
+.popup-success-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.96); /* Плотное премиальное тонирование */
+    border-radius: 12px;                /* Соответствует скруглению основного попапа */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+    z-index: 10;                        /* Перекрывает поля ввода, но оставляет кнопку Х доступной */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Класс запуска анимации тонирования */
+.popup-success-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Стилизация текста успешной отправки */
+.popup-success-text {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e5c07b;                     /* Фирменный золотой акцент Loft */
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Наследование шрифтов Loft в форме */
+.popup-form input,
+.popup-form select,
+.popup-form button,
+.popup-form select option {
+    font-family: inherit !important;
+    font-size: 14px;
+}
+
+/* Изменение локации селекта */
+.popup-form select {
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.popup-form select option {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Окно премиального тонирования */
+.popup-success-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.97);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+    z-index: 9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup-success-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-success-text {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e5c07b; /* Золотой Porsche/Loft */
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+/* Включаем плавный нативный скролл ко всем якорям для ПК и смартфонов */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Класс блокировки прыжков заднего фона при открытом попапе */
+body.popup-opened {
+    overflow: hidden !important; /* Убирает двойной скролл и прилипание */
+    touch-action: none;          /* Блокирует прокрутку пальцем на смартфонах */
+}
+
+/* Фиксируем красивый отступ сверху при скролле к акциям */
+#offers {
+    scroll-margin-top: 100px !important; /* Делает отступ, чтобы шапка не перекрывала заголовок */
+}

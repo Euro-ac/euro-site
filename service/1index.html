@@ -45,7 +45,7 @@
             <!-- МЕНЮ ВНУТРЕННЕЙ СТРАНИЦЫ -->
             <ul class="nav-menu">
                 <li><a href="../index.html#about">О нас</a></li>
-                <li><a href="1index.html">Услуги автосервиса</a></li>
+                <li><a href="..1index.html">Услуги автосервиса</a></li>
                 <li><a href="../index.html#carwash">Евромойка</a></li>
                 <li><a href="../index.html#detailing">Детейлинг</a></li>
                 <li><a href="../index.html#offers">Новости и акции</a></li>
@@ -419,29 +419,31 @@
             <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
             
             <!-- Интерактивная форма ввода данных -->
-            <form class="popup-form">
+            <form id="crmForm" class="popup-form" action="https://script.google.com/macros/s/AKfycbyzHLDaqtXI50Fz1RO8ia5mrnzEPcvizptnSnze5HK3DpZdyk3x7TBOdiZ2ha40PhWG/exec" method="POST">
+                <input type="hidden" id="pageUrlField" name="page_url" value="">
                 <div class="form-group">
                     <label>Ваше имя</label>
-                    <input type="text" placeholder="Иван Иванов" required>
+                    <input type="text" id="clientName" name="name" required placeholder="Иван Иванов">
                 </div>
                 
                 <div class="form-group">
                     <label>Номер телефона</label>
-                    <input type="tel" placeholder="+7 (999) 000-00-00" required>
+                    <input type="tel" id="clientPhone" name="phone" required placeholder="+7 (999) 000-00-00">
                 </div>
                 
                 <div class="form-group">
                     <label>Выберите направление услуг</label>
                     <select required>
-                        <option value="" disabled selected hidden>Нажмите для выбора...</option>
-                        <option value="service">Автосервис / Ремонт</option>
-                        <option value="wash">Евромойка</option>
-                        <option value="detailing">Детейлинг / Полировка</option>
+                        <option value="" disabled selected>Нажмите для выбора...</option>
+            <option value="Автосервис и Ремонт">Автосервис / Ремонт</option>
+            <option value="Автомойка">Автомойка</option>
+            <option value="Детейлинг и Полировка">Детейлинг / Полировка</option>
+            <option value="Хранение шин">Сезонное хранение шин</option>
                     </select>
                 </div>
                 
                 <!-- Премиальная кнопка отправки с золотым свечением -->
-                <button type="submit" class="popup-submit-btn">Подтвердить запись</button>
+                <button type="submit" id="submitBtn" class="popup-submit-btn">Подтвердить запись</button>
             </form>
         </div>
     </div>
@@ -600,6 +602,8 @@ document.querySelectorAll('.faq-trigger').forEach(trigger => {
         <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke-linecap="square"/>
     </svg>
 </a>
+
+<script src="../popup-universal.js"></script>
 
 </body>
 </html>
