@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автосервис | Автокомплекс Европейский Новокузнецк</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+ <!-- АДАПТИВНАЯ PREMIUM ШАПКА PORSCHE-LOFT CORE -->
+    <nav class="navbar">
+        <div class="nav-container">
+            
+            <!-- Логотип комплекса -->
+            <a href="../index.html" class="logo">
+                <span class="logo-main">ЕВРОПЕЙСКИЙ</span>
+                <span class="logo-sub">АВТОКОМПЛЕКС</span>
+            </a>
+
+            <!-- Скрытый чекбокс и бургер-иконка из style.css -->
+            <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+            <label for="menu-checkbox" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- МЕНЮ ВНУТРЕННЕЙ СТРАНИЦЫ -->
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">О нас</a></li>
+                <li><a href="1index.html">Услуги автосервиса</a></li>
+                <li><a href="../index.html#carwash">Евромойка</a></li>
+                <li><a href="../index.html#detailing">Детейлинг</a></li>
+                <li><a href="../index.html#offers">Новости и акции</a></li>
+                <li><a href="../index.html#contacts">Контакты</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ БАННЕР АВТОСЕРВИСА С ФОНОВЫМ ПАРАЛЛАКСОМ И ЭЛИТНОЙ ТИПОГРАФИКОЙ -->
+    <section class="hero-section" style="background-image: url('../images/photo-1527383418406-.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            
+            <h1 class="hero-title">Ваш автомобиль в <br>надежных руках!</h1>
+            
+            <p class="hero-text">
+                Решаем любые проблемы с автомобилем: от замены масла до сложного ремонта.<br>
+                Обслуживание без стресса и очередей в Автокомплексе Европейский.<br>
+                Все услуги для вашей уверенности за рулем!
+            </p>
+            
+            <div class="hero-mission">Автосервис • Новокузнецк</div>
+            
+        </div>
+    </section>
+
+<!-- ==========================================================================
+     МОБИЛЬНО-АДАПТИВНЫЙ LOFT-МОДУЛЬ УСЛУГ (БЕЗ ЦИФР)
+     ========================================================================== -->
+<section class="loft-services-layout">
+    <div class="loft-services-container">
+        
+            <!-- ИСПРАВЛЕННЫЙ БЛОК: СИНХРОНИЗАЦИЯ СТИЛЯ ЧЕРТЫ И ШРИФТА -->
+            <div class="eurowash-header" style="text-align: center; margin-bottom: 40px !important;">
+                <h2 class="eurowash-main-title" style="font-weight: 300 !important; letter-spacing: 3px !important; text-transform: uppercase !important; font-size: 36px !important; margin-bottom: 15px !important; color: #FFFFFF !important;">
+                    Наши услуги
+                </h2>
+                <div class="eurowash-line-divider" style="margin: 0 auto 20px auto !important;"></div>
+                <p class="eurowash-main-subtitle" style="max-width: 800px; margin: 0 auto !important;">
+                    Профессиональный автосервис, оснащенный передовым промышленным оборудованием для диагностики и ремонта автомобилей всех марок.
+                </p>
+            </div>
+
+        <div class="loft-tabs-wrapper">
+            
+            <!-- НАВИГАЦИЯ: СЕТКА ИЗ 6 ПЛИТ -->
+            <div class="loft-tabs-grid">
+                
+                <!-- КАТЕГОРИЯ 1 -->
+                <div class="loft-tab-group" id="group-cat-to">
+                    <div class="loft-tab-btn active" onclick="switchLoftTab(this, 'cat-to')">
+                        <span class="tab-title">Техническое обслуживание</span>
+                    </div>
+                </div>
+
+                <!-- КАТЕГОРИЯ 2 -->
+                <div class="loft-tab-group" id="group-cat-brakes">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-brakes')">
+                        <span class="tab-title">Тормозная система</span>
+                    </div>
+                </div>
+
+                <!-- КАТЕГОРИЯ 3 -->
+                <div class="loft-tab-group" id="group-cat-suspension">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-suspension')">
+                        <span class="tab-title">Ремонт ходовой части</span>
+                    </div>
+                </div>
+
+                <!-- КАТЕГОРИЯ 4 -->
+                <div class="loft-tab-group" id="group-cat-adjust">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-adjust')">
+                        <span class="tab-title">Регулировочные работы</span>
+                    </div>
+                </div>
+
+                <!-- КАТЕГОРИЯ 5 -->
+                <div class="loft-tab-group" id="group-cat-wheels">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-wheels')">
+                        <span class="tab-title">Премиальный шиномонтаж</span>
+                    </div>
+                </div>
+
+                <!-- КАТЕГОРИЯ 6 -->
+                <div class="loft-tab-group" id="group-cat-electronics">
+                    <div class="loft-tab-btn" onclick="switchLoftTab(this, 'cat-electronics')">
+                        <span class="tab-title">Диагностика систем</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ДЕСКТОПНЫЙ ХРАНИЛИЩЕ-ЭКРАН -->
+            <div class="loft-panels-display" id="desktop-display-panel">
+                
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 1 -->
+                <div class="loft-panel-content active" id="cat-to">
+                    <h3 class="panel-inside-title">Регламентные работы и техническое обслуживание</h3>
+                    <ul class="price-list-items">
+                        <li>Замена масла в ДВС</li>
+                        <li>Замена фильтра воздушного / салонного</li>
+                        <li>Замена жидкости в тормозной системе</li>
+                        <li>Замена масла в КПП</li>
+                        <li>Замена охлаждающей жидкости</li>
+                        <li>Замена ремней привода ГРМ и доп. оборудования <span class="spec-note">(рассчитывается в зависимости от марки, модели автомобиля и двигателя, которым он оснащен)</span></li>
+                        <li>Замена прокладки клапанной крышки</li>
+                        <li>Замена насоса системы охлаждения</li>
+                        <li>Замена термостата</li>
+                        <li>Замена ремня генератора</li>
+                        <li>Замена масла в ГУРе</li>
+                        <li>Замена рабочей жидкости в системе сцепления</li>
+                        <li class="and-others">И многое другое...</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра / диагностики (при необходимости) и зависит от класса, бренда автомобиля и объема расходных материалов.
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 2 -->
+                <div class="loft-panel-content" id="cat-brakes">
+                    <h3 class="panel-inside-title">Обслуживание тормозной системы</h3>
+                    <ul class="price-list-items">
+                        <li>Замена тормозных колодок передняя ось</li>
+                        <li>Замена тормозных колодок задняя ось (дисковые тормоза)</li>
+                        <li>Замена тормозных колодок задняя ось (барабанные тормоза)</li>
+                        <li>Замена тормозных дисков</li>
+                        <li>Замена тормозных барабанов</li>
+                        <li>Замена тросов стояночного тормоза</li>
+                        <li>Замена тормозных цилиндров</li>
+                        <li>Ремонт тормозных суппортов (замена рем-комплекта)</li>
+                        <li>Замена тормозной жидкости</li>
+                        <li class="and-others">И многое другое...</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра / диагностики (при необходимости) и зависит от класса, бренда автомобиля и объема расходных материалов.
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 3 -->
+                <div class="loft-panel-content" id="cat-suspension">
+                    <h3 class="panel-inside-title">Ремонт ходовой части</h3>
+                    <ul class="price-list-items">
+                        <li>Замена ступичного подшипника</li>
+                        <li>Замена рулевых наконечников</li>
+                        <li>Замена рулевой тяги</li>
+                        <li>Замена амортизатора переднего</li>
+                        <li>Замена амортизатора заднего</li>
+                        <li>Замена шаровой опоры без снятия рычага</li>
+                        <li>Замена шаровой опоры со снятием рычага</li>
+                        <li>Замена наружного ШРУСа</li>
+                        <li>Замена внутреннего ШРУСа</li>
+                        <li class="and-others">И многое другое...</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра / диагностики (при необходимости) и зависит от класса, бренда автомобиля и объема расходных материалов.
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 4 -->
+                <div class="loft-panel-content" id="cat-adjust">
+                    <h3 class="panel-inside-title">Регулировочные работы</h3>
+                    <ul class="price-list-items">
+                        <li>Развал-схождение (точная калибровка осей)</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра / диагностики (при необходимости) и зависит от класса, бренда автомобиля и объема расходных материалов.
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 5 -->
+                <div class="loft-panel-content" id="cat-wheels">
+                    <h3 class="panel-inside-title">Шиномонтаж</h3>
+                    <ul class="price-list-items">
+                        <li>Полный комплекс шиномонтажа до 22R</li>
+                        <li>Устранение боковых порезов любой сложности</li>
+                        <li>Балансировка колес <span class="spec-note">(рассчитывается в зависимости от размеров колеса)</span></li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра / диагностики (при необходимости) и зависит от класса, бренда автомобиля и объема расходных материалов.
+                    </div>
+                </div>
+
+                <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 6 -->
+                <div class="loft-panel-content" id="cat-electronics">
+                    <h3 class="panel-inside-title">Диагностика электронных систем</h3>
+                    <ul class="price-list-items">
+                        <li>Диагностика ЭБУ (электронных блоков управления)</li>
+                        <li>Чтение фактических параметров работы систем автомобиля в реальном времени</li>
+                        <li>Стирание системных ошибок и адаптация исполнительных механизмов</li>
+                        <li>Компьютерная диагностика всех видов и марок автомобилей</li>
+                    </ul>
+                    <div class="panel-disclaimer">
+                        * Итоговая стоимость формируется после осмотра / диагностики (при необходимости) и зависит от класса, бренда автомобиля и объема расходных материалов.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==========================================================================
+     КОМПОНЕНТ «КОМФОРТНОЕ ОЖИДАНИЕ» — FINAL CONTENT EDIT
+     ========================================================================== -->
+<section class="loft-comfort-monolith" style="background-image: url('../images/images (11).jpg');">
+    <div class="monolith-dark-overlay"></div>
+    
+    <div class="monolith-content">
+        <div class="comfort-header-centered">
+            <span class="comfort-meta-code">LOUNGE-ZONE</span>
+            <h2 class="comfort-title-main">Комфортное <span class="loft-bronze-accent">Ожидание</span></h2>
+            <div class="comfort-line-center"></div>
+            <!-- Исправленный текст строго по вашему ТЗ -->
+            <p class="comfort-text-lead">
+                Время ремонтных работ вы можете провести в зале ожидания нашего сервиса.
+            </p>
+        </div>
+
+        <div class="comfort-linear-ribbon">
+            
+            <!-- Пункт 1: Исправленный текст про кофе и чай -->
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ca9e5a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                </div>
+                <h4 class="ribbon-label">Кофе и чай</h4>
+                <p class="ribbon-desc">Свежий зерновой кофе или горячий чай</p>
+            </div>
+
+            <!-- Пункт 2 -->
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ca9e5a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20" stroke-width="2"></line>
+                    </svg>
+                </div>
+                <h4 class="ribbon-label">Wi-Fi сессия</h4>
+                <p class="ribbon-desc">Высокоскоростной доступ для удаленной работы</p>
+            </div>
+
+            <!-- Пункт 3: Переименовано в Видеонаблюдение -->
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ca9e5a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                </div>
+                <h4 class="ribbon-label">Видеонаблюдение</h4>
+                <p class="ribbon-desc">Прямая трансляция из ремзоны на экраны</p>
+            </div>
+
+            <!-- Пункт 4 -->
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ca9e5a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="0"></rect>
+                        <path d="M3 9h18M9 3v18"></path>
+                        <path d="M5 5l2 2M15 15l4 4M6 17h2M14 6h4"></path>
+                    </svg>
+                </div>
+                <h4 class="ribbon-label">Детская локация</h4>
+                <p class="ribbon-desc">Комфортное и безопасное игровое пространство</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     СЕКЦИЯ КОНТАКТОВ И ФИНАЛЬНЫЙ PREMIUM LOFT FOOTER
+     ========================================================================== -->
+<section class="loft-footer-section" id="contacts">
+    <div class="loft-footer-container">
+        
+        <!-- ЛЕВАЯ ПЛИТА: ИНФОРМАЦИОННОЕ ЯДРО -->
+        <div class="footer-info-plate">
+            <span class="footer-bronze-label">Контакты</span>
+            <h2 class="footer-main-title">Автокомплекс Европейский</h2>
+            <div class="footer-line-divider"></div>
+            
+            <!-- Режим работы -->
+            <div class="footer-meta-block">
+                <span class="meta-label">График работы:</span>
+                <span class="meta-value">С 09:00 до 20:00 <span class="bronze-faded">без выходных</span></span>
+            </div>
+
+            <!-- Телефонная матрица (каждая строка кликабельна) -->
+            <div class="footer-phones-grid">
+                <a href="tel:+79609210006" class="footer-phone-link">
+                    <span class="phone-number">+7 960 921 0006</span>
+                    <span class="phone-dept">автосервис</span>
+                </a>
+                <a href="tel:+79609260005" class="footer-phone-link">
+                    <span class="phone-number">+7 960 926 0005</span>
+                    <span class="phone-dept">автомойка</span>
+                </a>
+                <a href="tel:+79027577374" class="footer-phone-link">
+                    <span class="phone-number">+7 902 757 7374</span>
+                    <span class="phone-dept">детейлинг</span>
+                </a>
+                <a href="tel:+73843583888" class="footer-phone-link multi-channel">
+                    <span class="phone-number">+7 3843 583 888</span>
+                    <span class="phone-dept">многоканальный</span>
+                </a>
+            </div>
+
+            <!-- Почта и Локация -->
+            <div class="footer-navigation-links">
+                <a href="mailto:euro-ac@mail.ru" class="footer-interactive-anchor mail-anchor">
+                    euro-ac@mail.ru
+                </a>
+                <!-- Прямая ссылка-переход в карточку 2ГИС -->
+                <a href="https://2gis.ru/novokuznetsk/firm/70000001036397132?m=87.129982%2C53.785603%2F16" target="_blank" rel="noopener" class="footer-interactive-anchor address-anchor">
+                    г. Новокузнецк, ул. ДОЗ, д. 2Б
+                </a>
+            </div>
+
+            <!-- Блок социальных сетей (Иконки заменены на элитный текстовый разгон) -->
+            <div class="footer-social-loft">
+                <a href="https://vk.com/euroac" target="_blank" rel="noopener" class="social-loft-link">ВКонтакте</a>
+                <a href="https://max.ru/join/dJu6TANS-S82IZVHqAVHKqB6mJ25j6_Ol82j2X-LHgs" target="_blank" rel="noopener" class="social-loft-link">MAX</a>
+                <a href="https://t.me/EuroAutoServiceNVKZ" target="_blank" rel="noopener" class="social-loft-link">Telegram</a>
+            </div>
+            
+            <div class="footer-copyright-porsche">
+                © 2026 АВТОКОМПЛЕКС ЕВРОПЕЙСКИЙ. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+
+        <!-- ПРАВАЯ ПЛИТА: ИНТЕРАКТИВНАЯ ТЕМНАЯ КАРТА -->
+<div class="footer-map-plate">
+    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/yevropeyskiy/230646910896/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Европейский</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/car_service_auto_repair/184105246/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Автосервис, автотехцентр в Новокузнецке</a><a href="https://yandex.ru/maps/237/novokuznetsk/category/auto_detailing/9561111444/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Детейлинг в Новокузнецке</a><iframe src="https://yandex.ru/map-widget/v1/org/yevropeyskiy/230646910896/?ll=87.129810%2C53.785544&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+</div>
+</section>
+
+    <!-- КНОПКА ЗАПИСИ (из вашего кода Tilda) -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
+
+ <!-- ========================================== -->
+    <!-- БЛОК ОНЛАЙН-ЗАПИСИ (ФОРМА И КНОПКА)        -->
+    <!-- ========================================== -->
+
+    <!-- Модальное всплывающее окно (Попап) -->
+    <div id="popup:zapis" class="popup-overlay">
+        <!-- Кнопка-ссылка на саму себя для закрытия окна при клике на темный фон -->
+        <a href="#close" class="popup-close-area"></a>
+        
+        <!-- Само окно из матового стекла -->
+        <div class="popup-body-glass">
+            <!-- Изящный крестик для закрытия формы -->
+            <a href="#close" class="popup-close-btn">&times;</a>
+            
+            <!-- Заголовок формы -->
+            <h3>Онлайн-запись</h3>
+            <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
+            
+            <!-- Интерактивная форма ввода данных -->
+            <form class="popup-form">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Иван Иванов" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Выберите направление услуг</label>
+                    <select required>
+                        <option value="" disabled selected hidden>Нажмите для выбора...</option>
+                        <option value="service">Автосервис / Ремонт</option>
+                        <option value="wash">Евромойка</option>
+                        <option value="detailing">Детейлинг / Полировка</option>
+                    </select>
+                </div>
+                
+                <!-- Премиальная кнопка отправки с золотым свечением -->
+                <button type="submit" class="popup-submit-btn">Подтвердить запись</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Фиксированная кнопка записи VIP-формата с волнами цвета шампани -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
+        
+<script>
+function toggleFaq(trigger) {
+    // 1. Находим общую коробку текущего вопроса
+    const item = trigger.parentElement;
+    // 2. Находим скрытую панель ответа строго внутри этой коробки
+    const panel = item.querySelector('.faq-panel');
+    // 3. Проверяем, открыт ли этот вопрос прямо сейчас
+    const isNowActive = item.classList.contains('active');
+    
+    // Мягко закрываем все остальные открытые вопросы на сайте (эффект моно-аккордеона)
+    document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-panel').style.maxHeight = null;
+    });
+
+    // Если вопрос был закрыт — активируем класс и принудительно вычисляем его внутреннюю высоту в пикселях
+    if (!isNowActive) {
+        item.classList.add('active');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+}
+</script>
+
+<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
+<script>
+document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Вычисляем, где находится нужный блок на странице
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            
+            let startTime = null;
+            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
+
+            // Формула плавного замедления (Cubic Ease-Out)
+            function easeOutCubic(t, b, c, d) {
+                t /= d;
+                t--;
+                return c * (t * t * t + 1) + b;
+            }
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
+                
+                window.scrollTo(0, run);
+                
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            
+            requestAnimationFrame(animation);
+        }
+
+        // Автозакрытие мобильного меню (если открыто)
+        const burgerToggle = document.getElementById('menu-toggle');
+        if (burgerToggle && burgerToggle.checked) {
+            burgerToggle.checked = false;
+        }
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const item = trigger.parentNode;
+        item.classList.toggle('active');
+    });
+});
+</script>
+
+<script>
+    function switchLoftTab(btn, targetId) {
+        const isMobile = window.innerWidth <= 991;
+        const targetPanel = document.getElementById(targetId);
+        const parentGroup = btn.closest('.loft-tab-group');
+
+        // Базовый сброс активности у всех кнопок
+        document.querySelectorAll('.loft-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (isMobile) {
+            // Мобильная логика: если панель уже раскрыта внутри этой же группы — закрываем её
+            if (parentGroup.contains(targetPanel) && targetPanel.classList.contains('active')) {
+                targetPanel.classList.remove('active');
+                btn.classList.remove('active');
+                // Возвращаем панель обратно в десктопный блок-хранилище
+                document.getElementById('desktop-display-panel').appendChild(targetPanel);
+                return;
+            }
+
+            // Убираем старую активную панель у других элементов
+            document.querySelectorAll('.loft-panel-content').forEach(p => {
+                if(p.classList.contains('active')) {
+                    p.classList.remove('active');
+                    document.getElementById('desktop-display-panel').appendChild(p);
+                }
+            });
+
+            // Переносим контент внутрь мобильной группы прямо под кнопку и активируем
+            parentGroup.appendChild(targetPanel);
+            targetPanel.classList.add('active');
+
+            // Умный автоскролл: мягко докручиваем экран до нажатой кнопки
+            setTimeout(() => {
+                btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+
+        } else {
+            // Десктопная логика: возвращаем панели в штатное окно вывода справа
+            const display = document.getElementById('desktop-display-panel');
+            document.querySelectorAll('.loft-panel-content').forEach(p => {
+                p.classList.remove('active');
+                if (p.parentNode !== display) {
+                    display.appendChild(p);
+                }
+            });
+            targetPanel.classList.add('active');
+        }
+    }
+
+    // Запускаем проверку при изменении размеров экрана
+    window.addEventListener('resize', function() {
+        const activeBtn = document.querySelector('.loft-tab-btn.active');
+        if (activeBtn) {
+            const targetId = activeBtn.onclick.toString().match(/'([^']+)'/)[1];
+            switchLoftTab(activeBtn, targetId);
+        }
+    });
+</script>
+
+<!-- Плавающая стрелка «Наверх» в левом углу -->
+<a href="#" class="loft-scroll-top-btn" title="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke-linecap="square"/>
+    </svg>
+</a>
+
+</body>
+</html>
