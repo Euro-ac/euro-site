@@ -258,6 +258,139 @@
             </form>
         </div>
     </div>
+    </footer>
+
+        <!-- КНОПКА ЗАПИСИ (из вашего кода Tilda) -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
+
+ <!-- ========================================== -->
+    <!-- БЛОК ОНЛАЙН-ЗАПИСИ (ФОРМА И КНОПКА)        -->
+    <!-- ========================================== -->
+
+    <!-- Модальное всплывающее окно (Попап) -->
+    <div id="popup:zapis" class="popup-overlay">
+        <!-- Кнопка-ссылка на саму себя для закрытия окна при клике на темный фон -->
+        <a href="#close" class="popup-close-area"></a>
+        
+        <!-- Само окно из матового стекла -->
+        <div class="popup-body-glass">
+            <!-- Изящный крестик для закрытия формы -->
+            <a href="#close" class="popup-close-btn">&times;</a>
+            
+            <!-- Заголовок формы -->
+            <h3>Онлайн-запись</h3>
+            <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
+            
+            <!-- Интерактивная форма ввода данных -->
+            <form class="popup-form">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Иван Иванов" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Выберите направление услуг</label>
+                    <select required>
+                        <option value="" disabled selected hidden>Нажмите для выбора...</option>
+                        <option value="service">Автосервис / Ремонт</option>
+                        <option value="wash">Евромойка</option>
+                        <option value="detailing">Детейлинг / Полировка</option>
+                    </select>
+                </div>
+                
+                <!-- Премиальная кнопка отправки с золотым свечением -->
+                <button type="submit" class="popup-submit-btn">Подтвердить запись</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Фиксированная кнопка записи VIP-формата с волнами цвета шампани -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
+
+<script>
+function toggleFaq(trigger) {
+    // 1. Находим общую коробку текущего вопроса
+    const item = trigger.parentElement;
+    // 2. Находим скрытую панель ответа строго внутри этой коробки
+    const panel = item.querySelector('.faq-panel');
+    // 3. Проверяем, открыт ли этот вопрос прямо сейчас
+    const isNowActive = item.classList.contains('active');
+    
+    // Мягко закрываем все остальные открытые вопросы на сайте (эффект моно-аккордеона)
+    document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-panel').style.maxHeight = null;
+    });
+
+    // Если вопрос был закрыт — активируем класс и принудительно вычисляем его внутреннюю высоту в пикселях
+    if (!isNowActive) {
+        item.classList.add('active');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+}
+</script>
+
+<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
+<script>
+document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Вычисляем, где находится нужный блок на странице
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            
+            let startTime = null;
+            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
+
+            // Формула плавного замедления (Cubic Ease-Out)
+            function easeOutCubic(t, b, c, d) {
+                t /= d;
+                t--;
+                return c * (t * t * t + 1) + b;
+            }
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
+                
+                window.scrollTo(0, run);
+                
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            
+            requestAnimationFrame(animation);
+        }
+
+        // Автозакрытие мобильного меню (если открыто)
+        const burgerToggle = document.getElementById('menu-toggle');
+        if (burgerToggle && burgerToggle.checked) {
+            burgerToggle.checked = false;
+        }
+    });
+});
+</script>
 
 </body>
-</html>                      
+</html>                          

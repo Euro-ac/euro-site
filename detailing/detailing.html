@@ -253,76 +253,99 @@
         </div>
     </footer>
 
-    <!-- ИЗОЛИРОВАННОЕ ОКНО ОНЛАЙН-ЗАПИСИ (ОТКРЫВАЕТСЯ ПО КЛИКУ НА КНОПКУ) -->
-<div id="online-booking" class="popup-overlay">
-    <a href="#" class="popup-close-area"></a>
-    <div class="popup-body-glass" style="border-radius: 0 !important;">
-        <a href="#" class="popup-close-btn">&times;</a>
-        <h3>Онлайн-запись</h3>
-        <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
-        
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label>Ваше имя</label>
-                <input type="text" placeholder="Введите имя" required style="border-radius: 0 !important;">
-            </div>
-            <div class="form-group">
-                <label>Номер телефона</label>
-                <input type="tel" placeholder="+7 (999) 000-00-00" required style="border-radius: 0 !important;">
-            </div>
-            <div class="form-group">
-                <label>Направление услуг</label>
-                <select style="border-radius: 0 !important;">
-                    <option value="detailing" selected>Детейлинг / Полировка</option>
-                    <option value="service">Автосервис / Ремонт</option>
-                    <option value="wash">Евромойка</option>
-                </select>
-            </div>
-            <button type="submit" class="popup-submit-btn" style="border-radius: 0 !important;">Подтвердить запись</button>
-        </form>
-    </div>
-</div>
-
-    <!-- СЛУЖЕБНЫЕ КОМПОНЕНТЫ И МОДАЛЬНЫЕ ОКНА -->
-    <a href="#" class="loft-scroll-top-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M12 19V5M12 5l-7 7M12 5l7 7" stroke-linecap="square"/>
-        </svg>
+    <a href="#" class="loft-scroll-top-btn" style="border-radius: 0 !important;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 19V5M5 12l7-7 7 7" stroke-width="1.2"/></svg>
     </a>
 
-    <a href="#popup-booking" class="my-floating-btn">
+    <div id="online-booking" class="popup-overlay">
+        <a href="#" class="popup-close-area"></a>
+        <div class="popup-body-glass" style="border-radius: 0 !important;">
+            <a href="#" class="popup-close-btn">&times;</a>
+            <h3>Онлайн-запись</h3>
+            <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Введите имя" required style="border-radius: 0 !important;">
+                </div>
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (999) 000-00-00" required style="border-radius: 0 !important;">
+                </div>
+                <div class="form-group">
+                    <label>Направление услуг</label>
+                    <select style="border-radius: 0 !important;">
+                        <option value="service" selected>Автосервис / Ремонт</option>
+                        <option value="wash">Евромойка</option>
+                        <option value="detailing">Детейлинг / Полировка</option>
+                    </select>
+                </div>
+                <button type="submit" class="popup-submit-btn" style="border-radius: 0 !important;">Подтвердить запись</button>
+            </form>
+        </div>
+    </div>
+    </footer>
+
+        <!-- КНОПКА ЗАПИСИ (из вашего кода Tilda) -->
+    <a href="#popup:zapis" class="my-floating-btn">
         <div class="pulse-wave wave-1"></div>
         <div class="pulse-wave wave-2"></div>
         <span class="btn-text">Онлайн<br>запись</span>
     </a>
 
-    <div id="popup-booking" class="popup-overlay">
-        <a href="#" class="popup-close-area"></a>
+ <!-- ========================================== -->
+    <!-- БЛОК ОНЛАЙН-ЗАПИСИ (ФОРМА И КНОПКА)        -->
+    <!-- ========================================== -->
+
+    <!-- Модальное всплывающее окно (Попап) -->
+    <div id="popup:zapis" class="popup-overlay">
+        <!-- Кнопка-ссылка на саму себя для закрытия окна при клике на темный фон -->
+        <a href="#close" class="popup-close-area"></a>
+        
+        <!-- Само окно из матового стекла -->
         <div class="popup-body-glass">
-            <a href="#" class="popup-close-btn">&times;</a>
+            <!-- Изящный крестик для закрытия формы -->
+            <a href="#close" class="popup-close-btn">&times;</a>
+            
+            <!-- Заголовок формы -->
             <h3>Онлайн-запись</h3>
             <p class="popup-subtitle">Выберите удобное время для визита в автокомплекс</p>
-            <form action="#">
+            
+            <!-- Интерактивная форма ввода данных -->
+            <form class="popup-form">
                 <div class="form-group">
-                    <label for="usr-name">Ваше имя</label>
-                    <input type="text" id="usr-name" required placeholder="Иван">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Иван Иванов" required>
                 </div>
+                
                 <div class="form-group">
-                    <label for="usr-phone">Номер телефона</label>
-                    <input type="tel" id="usr-phone" required placeholder="+7 (900) 000-00-00">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (999) 000-00-00" required>
                 </div>
+                
                 <div class="form-group">
-                    <label for="usr-service">Выберите направление услуг</label>
-                    <select id="usr-service">
-                        <option value="detailing" selected>Детейлинг / Полировка</option>
+                    <label>Выберите направление услуг</label>
+                    <select required>
+                        <option value="" disabled selected hidden>Нажмите для выбора...</option>
                         <option value="service">Автосервис / Ремонт</option>
-                        <option value="mojka">Евромойка</option>
+                        <option value="wash">Евромойка</option>
+                        <option value="detailing">Детейлинг / Полировка</option>
                     </select>
                 </div>
+                
+                <!-- Премиальная кнопка отправки с золотым свечением -->
                 <button type="submit" class="popup-submit-btn">Подтвердить запись</button>
             </form>
         </div>
     </div>
+
+    <!-- Фиксированная кнопка записи VIP-формата с волнами цвета шампани -->
+    <a href="#popup:zapis" class="my-floating-btn">
+        <div class="pulse-wave wave-1"></div>
+        <div class="pulse-wave wave-2"></div>
+        <span class="btn-text">Онлайн<br>запись</span>
+    </a>
 
     <!-- МОДИФИКАТОР СМУЗ-СКРОЛЛА ДЛЯ ЯКОРЕЙ -->
     <script>
