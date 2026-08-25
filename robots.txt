@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /popup-universal.js
+Sitemap: https://euro-site.ru
+
+User-agent: Yandex
+Allow: /
+Disallow: /popup-universal.js
+Clean-param: ref /
+Sitemap: https://euro-site.ru

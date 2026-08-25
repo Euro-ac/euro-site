@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <!-- Главная страница автокомплекса -->
+  <url>
+    <loc>https://euro-ac.ru</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <!-- Страница Детейлинг-студии -->
+  <url>
+    <loc>https://euro-ac.ru</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <!-- Страница Автомойки -->
+  <url>
+    <loc>https://euro-ac.ru</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <!-- Акция: Безопасный километр (Автосервис) -->
+  <url>
+    <loc>https://euro-ac.ru</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <!-- Услуга: Сезонное хранение шин -->
+  <url>
+    <loc>https://euro-ac.ru</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>0.70</priority>
+  </url>
+</urlset>
