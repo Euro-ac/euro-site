@@ -3450,54 +3450,80 @@ body {
 .eurowash-portfolio-item:hover .eurowash-portfolio-img {
     transform: scale(1.04) !important;
 }
+/* 1. РОДИТЕЛЬСКАЯ ПЛАШКА: ОПУСКАЕМ НИЖЕ И РАЗМЫВАЕМ ГРАНИЦУ ТОПОРА */
+/* 1. РОДИТЕЛЬСКАЯ ПЛАШКА: ОПУСКАЕМ НИЖЕ И РАЗМЫВАЕМ ГРАНИЦУ ТОПОРА */
 .eurowash-portfolio-content {
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;
     width: 100% !important;
+    height: 30% !important;               /* Опустили высоту блюра до 30% карточки */
+    padding: 15px !important;
     box-sizing: border-box !important;
-    padding: 25px !important;
-    /* Мягкое бесшовное задымление снизу вверх без графичных границ */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0) 100%) !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
-}
-.eurowash-portfolio-title {
-    font-family: inherit !important;
-    font-weight: 500 !important;
-    font-size: 18px !important;
-    color: #FFFFFF !important;
-    margin: 0 0 10px 0 !important;
-    text-transform: none !important;
-    letter-spacing: 0.5px !important;
-}
-.eurowash-portfolio-text {
-    font-family: inherit !important;
-    font-weight: 300 !important;
-    font-size: 13.5px !important;
-    color: #B0B0B0 !important;
-    line-height: 1.45 !important;
-    margin: 0 !important;
+    z-index: 3 !important;
+    
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    
+    /* Мягкий градиент подложки */
+    background: linear-gradient(to top, 
+        rgba(10, 10, 12, 0.9) 0%, 
+        rgba(20, 18, 16, 0.5) 50%, 
+        rgba(0, 0, 0, 0) 100%) !important;
+    
+    /* Сама матовость (блюр) */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    
+    /* МАГИЯ РАСТВОРЕНИЯ БЛЮРА: эта маска делает так, что само размытие плавно тает кверху, уничтожая топор */
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%) !important;
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%) !important;
+    
+    transition: all 0.4s ease-in-out;
 }
 
+/* 2. ЗАГОЛОВОК: ПРОСТО УЛЬТРАТОНКИЙ БРОНЗОВЫЙ ТЕКСТ (БЕЗ НАЛОЖЕНИЙ И ПРЫЖКОВ) */
+.eurowash-portfolio-title {
+    font-family: inherit !important;
+    font-weight: 200 !important;          /* Ультратонкое премиальное начертание */
+    font-size: 11px !important;           /* Ювелирный размер подписи */
+    color: #bfa37a !important;            /* Благородная фирменная бронза */
+    margin: 0 !important;
+    padding: 0 !important;                /* Сбросили паддинги, которые ломали мобилку */
+    text-transform: uppercase !important; /* Строгий благородный капс */
+    letter-spacing: 0.12em !important;    /* Роскошный широкий разлет букв */
+    line-height: 1.4 !important;
+    text-align: left !important;          /* Строго по левому краю */
+    position: relative !important;        
+    width: 100% !important;
+    z-index: 4 !important;
+}
+
+/* 3. ОЧИЩЕННЫЙ И НАПРАВЛЕННЫЙ МОБИЛЬНЫЙ АДАПТИВ ДЛЯ СМАРТФОНОВ */
 @media (max-width: 768px) {
+    /* Перестраиваем сетку на телефонах в одну строгую колонку */
     .eurowash-portfolio-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
+    
+    /* Делаем карточки на смартфонах идеально квадратными */
     .eurowash-portfolio-item {
-        aspect-ratio: 1/1 !important;
+        aspect-ratio: 1 / 1 !important;
     }
+    
+    /* Подтягиваем дымку на мобильном экране для идеального контраста букв */
     .eurowash-portfolio-content {
+        height: 45% !important;
         padding: 15px !important;
     }
+    
+    /* Делаем шрифт на смартфонах чуть плотнее, чтобы бронза горела и не исчезала */
     .eurowash-portfolio-title {
-        font-size: 15px !important;
-        margin-bottom: 6px !important;
-    }
-    .eurowash-portfolio-text {
-        font-size: 11.5px !important;
-        line-height: 1.35 !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;       
+        letter-spacing: 0.1em !important;
     }
 }
 
@@ -3749,3 +3775,19 @@ body.popup-opened {
         letter-spacing: 1px !important;
     }
 }
+
+    /* УМЕНЬШЕНИЕ КРУПНЫХ ЗАГОЛОВКОВ НА ШИНАХ, ЧТОБЫ ОНИ ВЛЕЗАЛИ В ОДНУ СТРОКУ */
+    .section-title, 
+    h2 {
+        font-size: 20px !important;           /* Сжимаем размер букв на телефонах, чтобы слово влезло */
+        line-height: 1.3 !important;
+        letter-spacing: 0.03em !important;
+        word-wrap: normal !important;        /* Запрещаем некрасивый разрыв слов */
+    }    /* УМЕНЬШЕНИЕ КРУПНЫХ ЗАГОЛОВКОВ НА ШИНАХ, ЧТОБЫ ОНИ ВЛЕЗАЛИ В ОДНУ СТРОКУ */
+    .section-title, 
+    h2 {
+        font-size: 20px !important;           /* Сжимаем размер букв на телефонах, чтобы слово влезло */
+        line-height: 1.3 !important;
+        letter-spacing: 0.03em !important;
+        word-wrap: normal !important;        /* Запрещаем некрасивый разрыв слов */
+    }
