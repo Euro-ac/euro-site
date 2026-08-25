@@ -1,10 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /popup-universal.js
-Sitemap: https://euro-site.ru
+Disallow: /admin/
+Sitemap: https://euro-ac.ru
 
 User-agent: Yandex
 Allow: /
-Disallow: /popup-universal.js
+Disallow: /admin/
 Clean-param: ref /
-Sitemap: https://euro-site.ru
+Clean-param: utm_source&utm_medium&utm_campaign /
+Sitemap: https://euro-ac.ru

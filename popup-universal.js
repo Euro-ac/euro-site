@@ -72,6 +72,8 @@ formData.set('phone', cleanPhone); // Перезаписываем на чист
                 body: formData
             })
             .then(() => {
+                if (typeof ym === 'function') { ym(111897765, 'reachGoal', 'lead_success'); }
+                
                 if (successBlock) successBlock.classList.add('is-active');
 
                 // Очищаем поля формы через 1 секунду
@@ -132,5 +134,64 @@ formData.set('phone', cleanPhone); // Перезаписываем на чист
             history.pushState("", document.title, window.location.pathname + window.location.search);
             window.location.hash = 'close';
         });
+    }
+});
+
+// ==========================================
+// УНИВЕРСАЛЬНЫЙ ПЛАВНЫЙ СКРОЛЛ PORSCHE-LOFT ДЛЯ ВСЕХ СТРАНИЦ
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Обработка кликов по меню и стрелке "Наверх"
+    document.querySelectorAll('.nav-menu a, .loft-scroll-top-btn').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Если кликнули на стрелку Наверх (href="#") или чистый якорь текущей страницы
+            if (href === '#' || (href.startsWith('#') && document.querySelector(href))) {
+                e.preventDefault();
+                const target = href === '#' ? document.body : document.querySelector(href);
+                smartScroll(target);
+            } 
+            // Если мы на внутренней странице и кликаем на ссылку возврата (например, ../index.html#about)
+            else if (href.includes('#') && href.includes('index.html')) {
+                const targetId = href.split('#')[1];
+                // Если этот блок вдруг есть на текущей странице — плавно скроллим к нему
+                if (document.getElementById(targetId)) {
+                    e.preventDefault();
+                    smartScroll(document.getElementById(targetId));
+                }
+            }
+        });
+    });
+
+    // 2. Функция умной плавной анимации скролла (Cubic Ease-Out)
+    function smartScroll(targetElement) {
+        if (!targetElement) return;
+        
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 80; // -80px отступ под шапку
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1200; // 1.2 секунды вальяжного премиального хода
+        let startTime = null;
+
+        function easeOutCubic(t, b, c, d) {
+            t /= d; t--; return c * (t * t * t + 1) + b;
+        }
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        // Автозакрытие мобильного меню при клике
+        const burgerToggle = document.getElementById('menu-toggle');
+        if (burgerToggle && burgerToggle.checked) {
+            burgerToggle.checked = false;
+        }
+
+        requestAnimationFrame(animation);
     }
 });

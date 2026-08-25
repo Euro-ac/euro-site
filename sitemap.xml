@@ -4,30 +4,42 @@
   <url>
     <loc>https://euro-ac.ru</loc>
     <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
-  <!-- Страница Детейлинг-студии -->
+  <!-- Страница Автосервиса -->
   <url>
-    <loc>https://euro-ac.ru</loc>
+    <loc>https://euro-ac.ruservices</loc>
     <lastmod>2026-08-25</lastmod>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <!-- Страница Автомойки -->
   <url>
-    <loc>https://euro-ac.ru</loc>
+    <loc>https://euro-ac.ruevromojka</loc>
     <lastmod>2026-08-25</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <!-- Акция: Безопасный километр (Автосервис) -->
-  <url>
-    <loc>https://euro-ac.ru</loc>
-    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <!-- Страница Детейлинг-студии -->
+  <url>
+    <loc>https://euro-ac.rudetailing</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <!-- Акция: Безопасный километр -->
+  <url>
+    <loc>https://euro-ac.rusafe-kilometer</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
   <!-- Услуга: Сезонное хранение шин -->
   <url>
-    <loc>https://euro-ac.ru</loc>
+    <loc>https://euro-ac.rutyres</loc>
     <lastmod>2026-08-25</lastmod>
-    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 </urlset>

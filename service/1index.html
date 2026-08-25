@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автосервис в Новокузнецке: ремонт авто, диагностика подвески и ТО на ДОЗ</title>
 <meta name="description" content="Профессиональный автосервис Европейский. Ремонт ходовой, обслуживание тормозной системы, шиномонтаж и компьютерная диагностика в Новокузнецке. Бесплатная проверка подвески при ТО!">
-<link rel="canonical" href="https://euro-site.ru">
+<link rel="canonical" href="https://euro-ac.ru">
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -150,6 +150,7 @@
                 <!-- СОДЕРЖИМОЕ КАТЕГОРИИ 1 -->
                 <div class="loft-panel-content active" id="cat-to">
                     <h3 class="panel-inside-title">Регламентные работы и техническое обслуживание</h3>
+                    
                     <ul class="price-list-items">
                         <li>Замена масла в ДВС</li>
                         <li>Замена фильтра воздушного / салонного</li>
@@ -479,55 +480,6 @@ function toggleFaq(trigger) {
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
 }
-</script>
-
-<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
-<script>
-document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Вычисляем, где находится нужный блок на странице
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            
-            let startTime = null;
-            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
-
-            // Формула плавного замедления (Cubic Ease-Out)
-            function easeOutCubic(t, b, c, d) {
-                t /= d;
-                t--;
-                return c * (t * t * t + 1) + b;
-            }
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
-                
-                window.scrollTo(0, run);
-                
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                }
-            }
-            
-            requestAnimationFrame(animation);
-        }
-
-        // Автозакрытие мобильного меню (если открыто)
-        const burgerToggle = document.getElementById('menu-toggle');
-        if (burgerToggle && burgerToggle.checked) {
-            burgerToggle.checked = false;
-        }
-    });
-});
 </script>
 
 <script>

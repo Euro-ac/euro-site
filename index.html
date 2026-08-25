@@ -19,11 +19,11 @@
 <title>Автокомплекс Европейский Новокузнецк: автосервис, евромойка, детейлинг на ДОЗ</title>
 <meta name="description" content="Премиальный технологический центр автоуслуг в Новокузнецке. Профессиональный ремонт автомобилей, трехфазная евромойка химией Koch Chemie и детейлинг под ключ. Звоните: +7 (3843) 583-888.">
 <meta name="keywords" content="автокомплекс европейский, автосервис новокузнецк, евромойка, детейлинг новокузнецк, ремонт автомобилей, доз 2б">
-<link rel="canonical" href="https://euro-site.ru">
+<link rel="canonical" href="https://euro-ac.ru">
 <!-- Open Graph для соцсетей -->
 <meta property="og:title" content="Автокомплекс Европейский Новокузнецк — Весь спектр автоуслуг">
 <meta property="og:description" content="Ремонт любой сложности, бережная трехфазная мойка кузова KOCH и детейлинг-студия премиум-класса на ул. ДОЗ, 2Б.">
-<meta property="og:image" content="https://euro-site.ru">
+<meta property="og:image" content="https://euro-ac.ru">
 <meta property="og:type" content="website">
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -33,6 +33,64 @@
    <!-- Иконка для вкладки браузера (Favicon) из фото комплекса -->
    <link rel="icon" type="image/jpeg" href="images/3.jpg">
    <link rel="apple-touch-icon" href="images/3.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Автокомплекс Европейский",
+  "image": "https://euro-ac.ru",
+  "@id": "https://euro-ac.ru",
+  "url": "https://euro-ac.ru",
+  "telephone": "+73843583888",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. ДОЗ, д. 2Б",
+    "addressLocality": "Новокузнецк",
+    "postalCode": "654041",
+    "addressCountry": "RU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.763445,
+    "longitude": 87.114752
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://vk.com"
+  ],
+  "department": [
+    {
+      "@type": "AutoRepair",
+      "name": "Автосервис Европейский",
+      "telephone": "+79609210006"
+    },
+    {
+      "@type": "CarWash",
+      "name": "Евромойка Европейский",
+      "telephone": "+79609260005"
+    },
+    {
+      "@type": "AutoBodyShop",
+      "name": "Детейлинг-центр Европейский",
+      "telephone": "+79027577374"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -310,7 +368,16 @@
 <!-- УНИКАЛЬНАЯ СЕКЦИЯ: ОТЗЫВЫ КЛИЕНТОВ (2ГИС INTEGRATION) -->
 <section class="reviews-loft-section">
   <div class="reviews-loft-container">
-    
+    <div itemscope itemtype="https://schema.org" style="display:none;">
+            <meta itemprop="name" content="Автокомплекс Европейский Новокузнецк">
+            <meta itemprop="address" content="г. Новокузнецк, ул. ДОЗ, д. 2Б">
+            <div itemprop="aggregateRating" itemscope itemtype="https://schema.org">
+                <meta itemprop="ratingValue" content="4.8">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="ratingCount" content="142">
+            </div>
+        </div>
     <div class="reviews-loft-header">
       <h2 class="reviews-main-title">ОТЗЫВЫ КЛИЕНТОВ</h2>
       <div class="reviews-line-divider"></div>
@@ -318,13 +385,13 @@
 
     <div class="reviews-grid-system">
       <div class="reviews-img-wrapper">
-        <img src="images/noroot.jpg" alt="Отзыв клиента об автосервисе Европейский Новокузнецк на 2ГИС">
+        <img src="images/noroot.jpg" alt="Отзыв клиента об автосервисе Европейский Новокузнецк на 2ГИС"> loading="lazy">
       </div>
       <div class="reviews-img-wrapper">
-        <img src="images/noroot (1).jpg" alt="Положительный отзыв о качестве евромойки в автокомплексе Европейский">
+        <img src="images/noroot (1).jpg" alt="Положительный отзыв о качестве евромойки в автокомплексе Европейский"> loading="lazy">
       </div>
       <div class="reviews-img-wrapper">
-        <img src="images/noroot (2).jpg" alt="Отзыв автовладельца о детейлинге и полировке кузова на ул. ДОЗ 2Б">
+        <img src="images/noroot (2).jpg" alt="Отзыв автовладельца о детейлинге и полировке кузова на ул. ДОЗ 2Б"> loading="lazy">
       </div>
     </div>
 
@@ -622,55 +689,6 @@ function toggleFaq(trigger) {
 }
 </script>
 
-<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
-<script>
-document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Вычисляем, где находится нужный блок на странице
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            
-            let startTime = null;
-            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
-
-            // Формула плавного замедления (Cubic Ease-Out)
-            function easeOutCubic(t, b, c, d) {
-                t /= d;
-                t--;
-                return c * (t * t * t + 1) + b;
-            }
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
-                
-                window.scrollTo(0, run);
-                
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                }
-            }
-            
-            requestAnimationFrame(animation);
-        }
-
-        // Автозакрытие мобильного меню (если открыто)
-        const burgerToggle = document.getElementById('menu-toggle');
-        if (burgerToggle && burgerToggle.checked) {
-            burgerToggle.checked = false;
-        }
-    });
-});
-</script>
-
 <!-- Плавающая стрелка «Наверх» в левом углу -->
 <a href="#" class="loft-scroll-top-btn" title="Наверх">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -679,49 +697,6 @@ document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
 </a>
 
 <script src="./popup-universal.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AutoRepair",
-  "name": "Автокомплекс Европейский",
-  "image": "https://euro-site.ru",
-  "@id": "https://euro-site.ru",
-  "url": "https://euro-site.ru",
-  "telephone": "+73843583888",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. ДОЗ, д. 2Б",
-    "addressLocality": "Новокузнецк",
-    "postalCode": "654000",
-    "addressCountry": "RU"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 53.766127,
-    "longitude": 87.119045
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "09:00",
-    "closes": "20:00"
-  },
-  "sameAs": [
-    "https://vk.com",
-    "https://t.me"
-  ]
-}
-</script>
 
 </body>
 </html>

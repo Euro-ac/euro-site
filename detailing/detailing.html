@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Детейлинг в Новокузнецке: полировка кузова, оклейка пленкой, шумоизоляция авто</title>
 <meta name="description" content="Детейлинг-центр премиум-класса в автокомплексе Европейский на ДОЗ. Восстановительная полировка, бронирование антигравийными полиуретановыми пленками, комплексная шумоизоляция салона.">
-<link rel="canonical" href="https://euro-site.ru">
+<link rel="canonical" href="https://euro-ac.ru">
     <link rel="stylesheet" href="../style.css">
    <!-- Иконка для вкладки браузера (Favicon) из фото комплекса -->
    <link rel="icon" type="image/jpeg" href="../images/3.jpg">
@@ -43,7 +43,7 @@
     <li><a href="../index.html#about">О нас</a></li>
     <li><a href="../index.html#autoservice">Услуги автосервиса</a></li>
     <li><a href="../mojka/mojka.html">Евромойка</a></li>
-    <li><a href="detailing.html">Детейлинг</a></li>
+    <li><a href="../detailing/detailing.html">Детейлинг</a></li>
     <li><a href="../index.html#offers">Новости и акции</a></li>
     <li><a href="#contacts">Контакты</a></li>
 </ul>
@@ -377,55 +377,6 @@ function toggleFaq(trigger) {
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
 }
-</script>
-
-<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
-<script>
-document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Вычисляем, где находится нужный блок на странице
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            
-            let startTime = null;
-            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
-
-            // Формула плавного замедления (Cubic Ease-Out)
-            function easeOutCubic(t, b, c, d) {
-                t /= d;
-                t--;
-                return c * (t * t * t + 1) + b;
-            }
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
-                
-                window.scrollTo(0, run);
-                
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                }
-            }
-            
-            requestAnimationFrame(animation);
-        }
-
-        // Автозакрытие мобильного меню (если открыто)
-        const burgerToggle = document.getElementById('menu-toggle');
-        if (burgerToggle && burgerToggle.checked) {
-            burgerToggle.checked = false;
-        }
-    });
-});
 </script>
 
 <script>

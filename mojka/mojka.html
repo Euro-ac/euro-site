@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЕВРОМОЙКА Новокузнецк: трехфазная мойка кузова и химчистка салона — Koch Chemie</title>
 <meta name="description" content="Безопасная трехфазная автомойка авто немецкими составами Koch Chemie в Новокузнецке. Профессиональная химчистка салона, консервация кузова, удаление битума. Запись онлайн.">
-<link rel="canonical" href="https://euro-site.ru">
+<link rel="canonical" href="https://euro-ac.ru">
     <!-- Подключаем шрифт Inter с нужными весами 300, 400, 500 -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -53,7 +53,7 @@
             <ul class="nav-menu">
     <li><a href="../index.html#about">О нас</a></li>
     <li><a href="../index.html#autoservice">Услуги автосервиса</a></li>
-    <li><a href="mojka.html">Евромойка</a></li>
+    <li><a href="../mojka/mojka.html">Евромойка</a></li>
     <li><a href="../detailing/detailing.html">Детейлинг</a></li>
     <li><a href="../index.html#offers">Новости и акции</a></li>
     <li><a href="#contacts">Контакты</a></li>
@@ -430,55 +430,6 @@ function toggleFaq(trigger) {
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
 }
-</script>
-
-<!-- ИНЕРЦИОННЫЙ СКРОЛЛ ПО ТОКЕНУ PLDT-REACTIVE-V4.5-NVKZ-2026 -->
-<script>
-document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Вычисляем, где находится нужный блок на странице
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            
-            let startTime = null;
-            const duration = 1200; // СКОРОСТЬ: 1200мс = 1.2 секунды вальяжного хода. Можно увеличить до 1500 для еще более медленного скролла
-
-            // Формула плавного замедления (Cubic Ease-Out)
-            function easeOutCubic(t, b, c, d) {
-                t /= d;
-                t--;
-                return c * (t * t * t + 1) + b;
-            }
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeOutCubic(timeElapsed, startPosition, distance, duration);
-                
-                window.scrollTo(0, run);
-                
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                }
-            }
-            
-            requestAnimationFrame(animation);
-        }
-
-        // Автозакрытие мобильного меню (если открыто)
-        const burgerToggle = document.getElementById('menu-toggle');
-        if (burgerToggle && burgerToggle.checked) {
-            burgerToggle.checked = false;
-        }
-    });
-});
 </script>
 
 <script>
